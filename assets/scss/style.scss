@@ -35,35 +35,6 @@ html {
     .dark {
         display: none;
     }
-    // init
-    --text: #000000;
-    --bg: #fffdf1;
-    --bg-section: #FFFFFF;
-    --bg-selection: #030a16;
-    --text-selection: #fffdf1;
-    --bg-heading: url('../img/bg_heading.png');
-    --bg-small: url('../img/bg_resume_heading_small-1.png');
-    --bg-blog-heading: url('../img/bg_blog_heading.png');
-    --bg-blockquote: #f9f9f9;
-
-    // about
-    --bg-about-button: #000000;
-    --text-about-button: #FFFFFF;
-
-    // resume
-    --bg-resume-skill: #e6e6e6;
-
-    // project
-    --bg-nav: transparent;
-    --bg-hover-nav: #000000;
-    --text-nav-button-active: #FFFFFF;
-    --bg-nav-button-active: #000000;
-
-    // service
-    --bg-service: #efefef;
-
-    // social
-    --bg-social-icon: #f5f0d6;
 }
 
 html[data-theme='dark'] {
@@ -131,7 +102,6 @@ img {
         position: absolute;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: var(--bg-heading);
         margin: auto;
         left: 0;
         right: 0;
@@ -229,10 +199,12 @@ img {
     position: fixed;
     top: 0;
     .head__fix & {
-        top: -90px;
+        top: -70px;
+        transition: top 0.5s ease;
     }
     .head__show & {
         top: 0;
+        background-color: #FFF;
     }
     .header_inner {
         height: 90px;
@@ -258,7 +230,6 @@ img {
                             width: 50px;
                             height: 12px;
                             display: block;
-                            background-image: url("../img/bg_nav_active.png");
                             background-size: contain;
                             background-repeat: no-repeat;
                             position: absolute;
@@ -275,6 +246,9 @@ img {
                     }
                 }
             }
+        }
+        .head__show & {
+            height: 70px;
         }
     }
 }
@@ -345,6 +319,43 @@ img {
                 .hero__form--item {
                     padding: 0 10px;
                     flex: 1;
+                    position: relative;
+                    .form-extra {
+                        padding: 30px;
+                        position: absolute;
+                        top: 100px;
+                        width: 500px;
+                        right: 10px;
+                        background-color: #FFF;
+                        border: 1px solid #000;
+                        border-radius: 5px;
+                        z-index: 3;
+                        h4 {
+                            margin: 0 0 20px;
+                            padding: 0 0 10px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            border-bottom: 1px solid;
+                        }
+                        .form-extra__passenger--item {
+                            strong {
+                                font-weight: 600;
+                            }
+                            span {
+                                color: #999;
+                            }
+                            .form-extra__passenger--control {
+                                a {
+                                    padding: 0 10px;
+                                    font-size: 22px;
+                                }
+                                input.form-extra__passenger--number {
+                                    width: 100px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
                 }
                 label {
                     font-weight: 600;
@@ -361,6 +372,10 @@ img {
                     margin: 5px 0 0;
                 }
             }
+        }
+        .hero__form--button {
+            font-size: 18px;
+            cursor: pointer;
         }
     }
 }
@@ -461,7 +476,6 @@ img {
                                     display: block;
                                     background-size: contain;
                                     background-repeat: no-repeat;
-                                    background-image: var(--bg-blog-heading);
                                 }
                             }
 
@@ -507,7 +521,6 @@ img {
                     height: 12px;
                     background-size: contain;
                     background-repeat: no-repeat;
-                    background-image: var(--bg-small);
                 }
                 &:hover  {
                     transform: translate(0px, -2px);
@@ -688,7 +701,6 @@ img {
                         height: 12px;
                         background-size: contain;
                         background-repeat: no-repeat;
-                        background-image: var(--bg-small);
                     }
                     &:hover  {
                         transform: translate(0px, -2px);

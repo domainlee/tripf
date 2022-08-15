@@ -35,7 +35,6 @@
                             <a href="index.html">
                                 <h1 class="header__logo m-0">
                                     <img class="light" src="assets/img/logo.png" alt="logo" />
-                                    <img class="dark" src="assets/img/logo-dark.png" alt="logo" />
                                 </h1>
                             </a>
                         </div>
@@ -88,7 +87,7 @@
                                 <button class="" id="combo-tab" data-bs-toggle="tab" data-bs-target="#combo" type="button" role="tab" aria-controls="combo" aria-selected="false">Combo</button>
                             </li>
                         </ul>
-                        <a class="ms-auto">Find</a>
+                        <a class="hero__form--button ms-auto cursor-pointer"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </div>
                     <form>
                         <div class="tab-content" data-viewport="opacity">
@@ -114,6 +113,59 @@
                                         <label>Passenger, Class</label>
                                         <input type="text" placeholder="Number" name="flight_passenger_class" >
                                         <p class="exa">1 Adult, 2 Children, 1 Infant. Business...</p>
+                                        <div class="form-extra">
+                                            <h4>Cabin Class</h4>
+                                            <div class="form-extra__cabin d-flex justify-content-between mb-4">
+                                                <div class="form-extra__cabin--item">
+                                                    <input type="radio" id="economy" name="cabin" value="economy">
+                                                    <label for="economy">Economy</label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <input type="radio" id="business" name="cabin" value="business">
+                                                    <label for="business">Business</label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <input type="radio" id="first-class" name="cabin" value="first class">
+                                                    <label for="first-class">First Class</label>
+                                                </div>
+                                            </div>
+                                            <h4>Passenger</h4>
+                                            <div class="form-extra__passenger">
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Adult</strong>
+                                                        <span class="d-block">12+ yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Children</strong>
+                                                        <span class="d-block">2 - Less than 12 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between">
+                                                    <div>
+                                                        <strong class="d-block">Infant</strong>
+                                                        <span class="d-block">Less than 2 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
