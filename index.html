@@ -91,7 +91,7 @@
                     </div>
                     <form>
                         <div class="tab-content" data-viewport="opacity">
-                            <!-- Start -->
+                            <!-- Start Flights -->
                             <div class="tab-pane fade show active" id="flights" role="tabpanel" aria-labelledby="flights-tab">
                                 <div class="hero__form--list d-flex">
                                     <div class="hero__form--item d-flex flex-column">
@@ -124,21 +124,21 @@
                                                 <div class="form-extra__cabin--item">
                                                     <label>
                                                         Economy
-                                                        <input type="radio" id="economy" name="cabin" value="economy">
+                                                        <input type="radio" name="cabin" value="economy">
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                                 <div class="form-extra__cabin--item">
                                                     <label>
                                                         Business
-                                                        <input type="radio" id="business" name="cabin" value="business">
+                                                        <input type="radio" name="cabin" value="business">
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                                 <div class="form-extra__cabin--item">
                                                     <label>
                                                         First Class
-                                                        <input type="radio" id="first-class" name="cabin" value="first class">
+                                                        <input type="radio" name="cabin" value="first class">
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
@@ -183,14 +183,265 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- End -->
+                            <!-- End Flights -->
 
-                            <div class="tab-pane fade show" id="tours" role="tabpanel" aria-labelledby="tours-tab"></div>
-                            <div class="tab-pane fade show" id="hotels" role="tabpanel" aria-labelledby="hotels-tab"></div>
-                            <div class="tab-pane fade show" id="combo" role="tabpanel" aria-labelledby="combo-tab"></div>
+                            <!-- Start Tours -->
+                            <div class="tab-pane fade show" id="tours" role="tabpanel" aria-labelledby="tours-tab">
+                                <div class="hero__form--list d-flex">
+                                    <div class="hero__form--item w-25 flex-fill d-flex flex-column">
+                                        <label>Destination</label>
+                                        <input type="text" placeholder="Where are you going?" name="flight_from" >
+                                        <p class="exa">JFK - John F. Kennedy International...</p>
+                                    </div>
+                                    <div class="hero__form--item d-flex flex-column">
+                                        <label>Journey date</label>
+                                        <input type="date" name="flight_date">
+                                        <p class="exa">Flight date</p>
+                                    </div>
+                                    <div class="hero__form--item d-flex flex-column">
+                                        <label>Return date</label>
+                                        <input type="date" name="flight_date">
+                                        <p class="exa">Flight date</p>
+                                    </div>
+                                    <div class="hero__form--item d-flex flex-column">
+                                        <label>Passenger, Class</label>
+                                        <input type="text" placeholder="Number" class="button-form-extra" data-form="tours_passenger_form" name="flight_passenger_class" >
+                                        <p class="exa">1 Adult, 2 Children, 1 Infant. Business...</p>
+                                        <div id="tours_passenger_form" class="form-extra">
+                                            <h4>Cabin Class</h4>
+                                            <div class="form-extra__cabin d-flex justify-content-between mb-4">
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Economy
+                                                        <input type="radio" name="cabin" value="economy">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Business
+                                                        <input type="radio" name="cabin" value="business">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        First Class
+                                                        <input type="radio" name="cabin" value="first class">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h4>Passenger</h4>
+                                            <div class="form-extra__passenger">
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Adult</strong>
+                                                        <span class="d-block">12+ yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Children</strong>
+                                                        <span class="d-block">2 - Less than 12 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between">
+                                                    <div>
+                                                        <strong class="d-block">Infant</strong>
+                                                        <span class="d-block">Less than 2 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Tours -->
 
+                            <!-- Start Hotels -->
+                            <div class="tab-pane fade show" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
+                                <div class="hero__form--list d-flex">
+                                    <div class="hero__form--item w-25 flex-fill d-flex flex-column">
+                                        <label>Destination</label>
+                                        <input type="text" placeholder="Where are you going?" name="flight_from" >
+                                        <p class="exa">JFK - John F. Kennedy International...</p>
+                                    </div>
+                                    <div class="hero__form--item d-flex flex-column">
+                                        <label>Journey date</label>
+                                        <input type="date" name="flight_date">
+                                        <p class="exa">Flight date</p>
+                                    </div>
+                                    <div class="hero__form--item d-flex flex-column">
+                                        <label>Return date</label>
+                                        <input type="date" name="flight_date">
+                                        <p class="exa">Flight date</p>
+                                    </div>
+                                    <div class="hero__form--item d-flex flex-column">
+                                        <label>Passenger, Class</label>
+                                        <input type="text" placeholder="Number" class="button-form-extra" data-form="tours_passenger_hotels" name="flight_passenger_class" >
+                                        <p class="exa">1 Adult, 2 Children, 1 Infant. Business...</p>
+                                        <div id="tours_passenger_hotels" class="form-extra">
+                                            <h4>Cabin Class</h4>
+                                            <div class="form-extra__cabin d-flex justify-content-between mb-4">
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Economy
+                                                        <input type="radio" name="cabin" value="economy">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Business
+                                                        <input type="radio" name="cabin" value="business">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        First Class
+                                                        <input type="radio" name="cabin" value="first class">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h4>Passenger</h4>
+                                            <div class="form-extra__passenger">
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Adult</strong>
+                                                        <span class="d-block">12+ yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Children</strong>
+                                                        <span class="d-block">2 - Less than 12 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between">
+                                                    <div>
+                                                        <strong class="d-block">Infant</strong>
+                                                        <span class="d-block">Less than 2 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Hotels -->
+
+                            <!-- Start Combo -->
+                            <div class="tab-pane fade show" id="combo" role="tabpanel" aria-labelledby="combo-tab">
+                                <div class="hero__form--list d-flex">
+                                    <div class="hero__form--item w-75 flex-fill d-flex flex-column">
+                                        <label>Destination</label>
+                                        <input type="text" placeholder="Where are you going?" name="flight_from" >
+                                        <p class="exa">JFK - John F. Kennedy International...</p>
+                                    </div>
+                                    <div class="hero__form--item d-flex flex-column">
+                                        <label>Passenger, Class</label>
+                                        <input type="text" placeholder="Number" class="button-form-extra" data-form="combo_passenger_form" name="flight_passenger_class" >
+                                        <p class="exa">1 Adult, 2 Children, 1 Infant. Business...</p>
+                                        <div id="combo_passenger_form" class="form-extra">
+                                            <h4>Cabin Class</h4>
+                                            <div class="form-extra__cabin d-flex justify-content-between mb-4">
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Economy
+                                                        <input type="radio" name="cabin" value="economy">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Business
+                                                        <input type="radio" name="cabin" value="business">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        First Class
+                                                        <input type="radio" name="cabin" value="first class">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h4>Passenger</h4>
+                                            <div class="form-extra__passenger">
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Adult</strong>
+                                                        <span class="d-block">12+ yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between mb-3">
+                                                    <div>
+                                                        <strong class="d-block">Children</strong>
+                                                        <span class="d-block">2 - Less than 12 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex justify-content-between">
+                                                    <div>
+                                                        <strong class="d-block">Infant</strong>
+                                                        <span class="d-block">Less than 2 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" />
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Combo -->
                         </div>
-
                     </form>
 
                 </div>
