@@ -198,9 +198,10 @@ img {
     width: 100%;
     position: fixed;
     top: 0;
+    background-color: $color-white;
+    transition: top 0.5s ease;
     .head__fix & {
-        top: -70px;
-        transition: top 0.5s ease;
+        top: -90px;
     }
     .head__show & {
         top: 0;
@@ -320,6 +321,12 @@ img {
                     padding: 0 10px;
                     flex: 1;
                     position: relative;
+                    &.active {
+                        .form-extra {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
                     .form-extra {
                         padding: 30px;
                         position: absolute;
@@ -330,12 +337,67 @@ img {
                         border: 1px solid #000;
                         border-radius: 5px;
                         z-index: 3;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.2s ease;
+                        box-shadow: 0 4px 10px 4px rgb(0 0 0 / 5%);
                         h4 {
                             margin: 0 0 20px;
                             padding: 0 0 10px;
                             font-size: 18px;
                             font-weight: 600;
                             border-bottom: 1px solid;
+                        }
+                        .form-extra__cabin {
+                            .form-extra__cabin--item {
+                                label {
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                    padding-left: 30px;
+                                    margin-bottom: 12px;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                    -webkit-user-select: none;
+                                    -moz-user-select: none;
+                                    -ms-user-select: none;
+                                    user-select: none;
+                                    input {
+                                        position: absolute;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                    }
+                                    input:checked ~ .checkmark {
+                                        background-color: #fea400;
+                                    }
+                                    input:checked ~ .checkmark:after {
+                                        display: block;
+                                    }
+                                    .checkmark {
+                                        margin: auto;
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        height: 20px;
+                                        width: 20px;
+                                        background-color: #eee;
+                                        border-radius: 50%;
+                                        transition: all 0.2s ease;
+                                        &:after {
+                                            top: 9px;
+                                            left: 9px;
+                                            width: 8px;
+                                            height: 8px;
+                                            border-radius: 50%;
+                                            background: white;
+                                        }
+                                    }
+                                    &:hover input ~ .checkmark {
+                                        background-color: #fea400;
+                                    }
+                                }
+                            }
                         }
                         .form-extra__passenger--item {
                             strong {
@@ -345,9 +407,21 @@ img {
                                 color: #999;
                             }
                             .form-extra__passenger--control {
+                                display: flex;
+                                align-items: center;
                                 a {
                                     padding: 0 10px;
                                     font-size: 22px;
+                                    width: 30px;
+                                    height: 30px;
+                                    display: inline-flex;
+                                    border: 1px solid;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin: 0 5px;
+                                    border-radius: 50%;
+                                    background-color: #000;
+                                    color: #FFF;
                                 }
                                 input.form-extra__passenger--number {
                                     width: 100px;
@@ -358,8 +432,8 @@ img {
                     }
                 }
                 label {
-                    font-weight: 600;
                     margin: 0 0 5px;
+                    font-weight: 600;
                 }
                 input, select {
                     padding: 10px 15px;

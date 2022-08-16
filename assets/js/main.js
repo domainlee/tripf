@@ -317,6 +317,39 @@
         });
     }
 
+    var form_search = function () {
+        var button = $('.button-form-extra');
+        button.each(function () {
+            var b = $(this);
+            var c = b.closest('.hero__form--item');
+            b.click(function () {
+                c.toggleClass('active');
+            });
+            $("html").click(function(e) {
+                if ($(e.target).closest('.form-extra').length == 0 && $(e.target).closest('.button-form-extra').length == 0) {
+                    c.removeClass('active');
+                }
+            });
+        });
+
+        var passenger = $('.form-extra__passenger--item');
+        passenger.each(function () {
+            var t = $(this);
+            var number = t.find('.form-extra__passenger--number');
+            var add = t.find('.add');
+            var minus = t.find('.minus');
+            var n = 0;
+            add.click(function () {
+                number.val(++n);
+            });
+            minus.click(function () {
+                if (n >= 1) {
+                    number.val(--n);
+                }
+            });
+        });
+    }
+
     var component_blog = function () {
         var blog_list = $('.my-blog__items'), content = $('.my-blog__popup--inner'), button_close = $('.my-blog__popup--close');
         blog_list.each(function () {
@@ -449,6 +482,7 @@
         scrollTo();
         popup();
         form();
+        form_search();
         skill();
         component_blog();
         dark();
