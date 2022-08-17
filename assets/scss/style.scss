@@ -263,7 +263,7 @@ img {
 
 
 .hero {
-    margin: 0 0 150px;
+    margin: 0 0 50px;
     .hero__image {
         background-position: center;
         background-size: 110% auto;
@@ -302,14 +302,20 @@ img {
         .hero__nav {
             margin: 0 0 15px;
             .nav-item {
+                margin: 0 5px 0 0;
                 button {
                     padding: 8px 20px;
                     border: none;
                     background-color: transparent;
                     border-radius: 5px;
+                    transition: background-color 0.3s ease;
                     &.active {
                         color: #FFF;
-                        background-color: #ffa500;
+                        @extend .bg-orange-gradient;
+                    }
+                    &:hover {
+                        color: $color-white;
+                        background-color: $color-black;
                     }
                 }
             }
@@ -484,12 +490,135 @@ img {
 }
 
 .bg-orange-gradient {
-    background: rgb(255,175,75);
-    background: -moz-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 );
+    background: rgb(255,185,66); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,185,66,1) 0%, rgba(255,165,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,185,66,1) 0%,rgba(255,165,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,185,66,1) 0%,rgba(255,165,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb942', endColorstr='#ffa500',GradientType=0 ); /* IE6-9 */
 }
+.bg-green-gradient {
+    background: rgb(177,255,172); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(177,255,172,1) 0%, rgba(126,204,119,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(177,255,172,1) 0%,rgba(126,204,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(177,255,172,1) 0%,rgba(126,204,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ffac', endColorstr='#7ecc77',GradientType=0 ); /* IE6-9 */
+}
+.bg-blue-gradient {
+    background: rgb(187,229,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(187,229,255,1) 0%, rgba(117,181,224,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(187,229,255,1) 0%,rgba(117,181,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(187,229,255,1) 0%,rgba(117,181,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbe5ff', endColorstr='#75b5e0',GradientType=0 ); /* IE6-9 */
+}
+.bg-red-gradient {
+    background: rgb(255,215,215); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,215,215,1) 0%, rgba(239,144,144,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,215,215,1) 0%,rgba(239,144,144,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,215,215,1) 0%,rgba(239,144,144,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd7d7', endColorstr='#ef9090',GradientType=0 ); /* IE6-9 */
+}
+.bg-brow-gradient {
+    background: rgb(255,244,220); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,244,220,1) 0%, rgba(234,199,133,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,244,220,1) 0%,rgba(234,199,133,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,244,220,1) 0%,rgba(234,199,133,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff4dc', endColorstr='#eac785',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+/** 9. Start Support **/
+.support {
+    padding: 50px 0;
+    .support__headline {
+        font-size: 26px;
+        font-weight: 700;
+        &:before {
+            margin: 0 0 15px;
+            content: "";
+            width: 60px;
+            height: 60px;
+            display: block;
+            background-size: contain;
+            background-image: url('../img/icon-p-orange.png');
+        }
+    }
+    .support__item {
+        i {
+            margin: 0 0 15px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 26px;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: opacity 0.2s ease;
+                opacity: 0;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+        .support__headline--small {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        &:nth-child(2) {
+            i {
+                color: #276327;
+                border: 1px solid;
+                &:after {
+                    @extend .bg-green-gradient;
+                }
+            }
+        }
+        &:nth-child(3) {
+            i {
+                color: #3f79a4;
+                border: 1px solid;
+                &:after {
+                    @extend .bg-blue-gradient;
+                }
+            }
+        }
+        &:nth-child(4) {
+            i {
+                color: #dd6060;
+                border: 1px solid;
+                &:after {
+                    @extend .bg-red-gradient;
+                }
+            }
+        }
+        &:nth-child(5) {
+            i {
+                color: #bb9665;
+                border: 1px solid;
+                &:after {
+                    @extend .bg-brow-gradient;
+                }
+            }
+        }
+        &:hover {
+            i {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+/** 9. Start Support **/
+
 
 /** 9. Start My Blog **/
 .my-blog {
