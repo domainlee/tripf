@@ -87,7 +87,7 @@ img {
     padding-right: 50px;
 }
 .heading-default {
-    margin: 0 0 30px;
+    margin: 0 0 50px;
     position: relative;
     color: var(--text);
     font-weight: 700;
@@ -210,6 +210,7 @@ img {
     .header_inner {
         height: 90px;
         .header__logo {
+            line-height: 0;
             img {
                 height: 36px;
             }
@@ -616,7 +617,7 @@ img {
     padding: 50px 0;
     position: relative;
     .discount__list {
-        margin: 0 -15px;
+        margin: -30px -15px 0;
         padding: 0 80px 80px;
         display: flex;
         flex-wrap: wrap;
@@ -640,13 +641,45 @@ img {
                 background-color: #FFF;
                 border-radius: 10px;
                 overflow: hidden;
+                transition: all 0.5s ease;
+                transform: translate(0, 0);
+                &:hover {
+                    box-shadow: 0 4px 10px 4px rgb(0 0 0 / 5%);
+                    figure {
+                        background-size: auto 110%;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
                 figure {
+                    transition: all 0.5s ease;
+                    background-position: center;
+                    background-size: auto 100%;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        height: 100%;
+                        left: 0;
+                        right: 0;
+                        background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 57%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.3) 57%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.3) 57%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+                        z-index: 0;
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
+                    }
                     h3 {
+                        margin: 0;
                         text-transform: uppercase;
                         font-size: 16px;
                         font-weight: 600;
                         padding: 30px;
                         color: #FFF;
+                        z-index: 1;
                     }
                 }
                 .discount__content {
@@ -654,16 +687,21 @@ img {
                     position: relative;
                     .discount__price {
                         margin: 0 0 10px;
-                        font-weight: 500;
+                        font-weight: 700;
                         color: #ff8604;
                     }
                     .discount__booking-id {
                         margin: 0 0 5px;
                         font-weight: 700;
-                        font-size: 18px;
+                        font-size: 16px;
                     }
                     span {
                         color: #aeaeae;
+                        display: flex;
+                        align-items: center;
+                        i {
+                            margin: 0 5px 0 0;
+                        }
                     }
                     .discount__number {
                         width: 60px;
@@ -684,10 +722,206 @@ img {
             }
         }
     }
+    .discount__button {
+        margin: -30px 0 0;
+        text-align: center;
+        a {
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 28px;
+            cursor: pointer;
+        }
+    }
 }
 /** 9. Start Support **/
 
+.top-destinations {
+    padding: 50px 0;
+    .top-destinations__list {
+        .top-destinations__item {
+            position: relative;
+            &:hover {
+                .top-destinations__image {
+                    background-size: auto 110%;
+                }
+            }
+            .top-destinations__image {
+                margin: 0;
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                transition: all .5s ease;
+                max-height: inherit;
+                overflow: hidden;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 0;
+                    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 57%, rgba(0,0,0,0.4) 100%);
+                    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 57%,rgba(0,0,0,0.4) 100%);
+                    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 57%,rgba(0,0,0,0.4) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 );
+                }
+                .top-destinations__content {
+                    top: initial;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    color: #FFF;
+                    padding: 30px;
+                    justify-content: flex-end;
+                    z-index: 1;
+                    .top-destinations__name {
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            button {
+                width: 50px;
+                height: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: $color-black;
+                background-color: $color-white;
+                position: absolute;
+                top: 40%;
+                box-shadow: 0 0 9px 8px #0000000d;
+                &.owl-prev {
+                    left: -30px;
+                }
+                &.owl-next {
+                    right: -30px;
+                }
+                &:hover {
+                    background-color: $color-black;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
 
+.resort-surprises {
+    padding: 50px 0;
+    .resort-surprises__headline {
+        font-weight: 700;
+        font-size: 42px;
+    }
+    .resort-surprises__intro {
+        margin: 0 0 30px;
+    }
+    .resort-surprises__features {
+        .resort-surprises__feature--item {
+            margin: 0 0 15px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            i {
+                margin: 0 10px 0 0;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #ff8604;
+                background-size: auto 20px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .resort-surprises__right {
+        padding: 0 50px 50px;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 200px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff9e6;
+            z-index: -1;
+            border-radius: 20px;
+        }
+        .resort-surprises__videos {
+            .resort-surprises__video--item {
+                padding: 15px;
+                figure {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 10px;
+                    border: 3px solid #FFF;
+                    box-shadow: 0 3px 10px 5px #00000030;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: #00000029;
+                        border-radius: 10px;
+                    }
+                    a {
+                        margin: auto;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        width: 50px;
+                        height: 50px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #FFF;
+                        font-size: 38px;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+    .resort-surprises__list--thumb {
+        .owl-stage {
+            margin: 0 auto;
+            .owl-item {
+                &.current {
+                    .resort-surprises__item--thumb {
+                        opacity: 1;
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+        .resort-surprises__item--thumb {
+            opacity: 0.5;
+            filter: grayscale(50%);
+            figure {
+                margin: 0 10px;
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                max-height: initial !important;
+            }
+        }
+    }
+}
 
 /** 9. Start My Blog **/
 .my-blog {
@@ -1535,45 +1769,29 @@ body.my-blog__popup--js {
     }
 }
 .owl-carousel  {
-    &.my-client__list {
-        .owl-item {
-            .owl-lazy {
-                max-height: initial !important;
+    .owl-item {
+        .owl-lazy {
+            max-height: initial !important;
+        }
+    }
+    .owl-nav {
+        button {
+            i {
+                display: inline-block;
             }
         }
-        .owl-nav {
-            button {
-                position: absolute;
-                top: 30%;
-                color: var(--bg-about-button) !important;
-                font-size: 36px !important;
-                transition: all 0.5s ease;
-                i {
-                    display: inline-block;
-                }
-                &.owl-prev {
-                    left: -10%;
-                }
-                &.owl-next {
-                    right: -10%;
-                }
-                &:hover {
-                    background-color: transparent !important;
-                }
+    }
+    .owl-dots {
+        .owl-dot {
+            span {
+                margin: 5px;
+                border: 1px solid var(--border-dot);
+                background-color: var(--bg-dot);
             }
-        }
-        .owl-dots {
-            .owl-dot {
+            &.active {
                 span {
-                    margin: 5px;
-                    border: 1px solid var(--border-dot);
-                    background-color: var(--bg-dot);
-                }
-                &.active {
-                    span {
-                        border: 1px solid var(--border-dot-active);
-                        background-color: var(--bg-dot-active);
-                    }
+                    border: 1px solid var(--border-dot-active);
+                    background-color: var(--bg-dot-active);
                 }
             }
         }

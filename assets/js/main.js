@@ -115,8 +115,8 @@
     };
 
     var owlCarousel = function() {
-        var client_slider = $('.my-client__js');
-        var client_slider_thumbnail = $('.my-client__js--thumb');
+        var client_slider = $('.resort-surprises__js');
+        var client_slider_thumbnail = $('.resort-surprises__js--thumb');
         var syncedSecondary = true;
         var slidesPerPage = 4;
 
@@ -124,7 +124,7 @@
             loop: true,
             margin: 0,
             dots: false,
-            nav: true,
+            nav: false,
             lazyLoad: true,
             autoplay: true,
             items: 1,
@@ -137,7 +137,7 @@
                     nav: false,
                 },
                 768: {
-                    nav: true,
+                    nav: false,
                 }
             }
         }).on('changed.owl.carousel', syncPosition);
@@ -147,7 +147,7 @@
         }).owlCarousel({
             items: slidesPerPage,
             dots: true,
-            nav: true,
+            nav: false,
             lazyLoad: true,
             smartSpeed: 200,
             slideSpeed: 500,
@@ -190,15 +190,15 @@
             client_slider.data('owl.carousel').to(number, 300, true);
         });
 
-        $('.gallery-side--js').owlCarousel({
+        $('.top-destinations__js').owlCarousel({
             loop: true,
-            margin: 0,
+            margin: 30,
             dots: false,
             nav: true,
             lazyLoad: true,
             autoplay: true,
-            items: 1,
-            navText : ["<i class='icofont-thin-left'></i>","<i class='icofont-thin-right'></i>"],
+            items: 4,
+            navText : ["<i class='icofont-rounded-left'></i>","<i class='icofont-rounded-right'></i>"],
             responsive: {
                 0: {
                     nav: false,
@@ -211,6 +211,8 @@
                 }
             }
         });
+
+
 
     };
 
