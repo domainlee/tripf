@@ -128,6 +128,7 @@
             lazyLoad: true,
             autoplay: true,
             items: 1,
+            animateOut: 'fadeOut',
             navText : ["<i class='icofont-caret-left'></i>","<i class='icofont-caret-right'></i>"],
             responsive: {
                 0: {
