@@ -983,6 +983,10 @@ img {
         text-align: center;
         background-color: #fff9e6;
         border-radius: 20px;
+        background-image: url('../img/bg_popular.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         .popular-search__item {
             display: inline-block;
             a {
@@ -1031,6 +1035,11 @@ img {
             width: 50%;
             .blog__items {
                 margin: 0 0 15px;
+                transition: all 0.5s ease;
+                transform: translate(0, 0);
+                &:hover {
+                    transform: translate(5px, 0);
+                }
                 figure {
                     border-radius: 10px;
                 }
@@ -1047,20 +1056,91 @@ img {
 /** 9. End My Blog **/
 
 /** 10. Start Contact **/
-
+.better-work {
+    padding: 50px 0;
+    .heading-default {
+        margin: 0 0 20px;
+    }
+    .better-work__sub {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 300px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .better-work__form {
+        margin: 15px 0 0;
+        form {
+            display: flex;
+            justify-content: center;
+            input, button {
+                height: 45px;
+                border-radius: 10px;
+            }
+            input {
+                padding: 0 15px;
+                width: 300px;
+                border: 1px solid #DDD;
+            }
+            button {
+                margin: 0 0 0 10px;
+                padding: 0 20px;
+                border: none;
+                color: $color-white;
+                @extend .bg-orange-gradient;
+                font-weight: 400;
+                font-size: 14px;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: translate(0, -2px);
+                    box-shadow: 0 4px 10px 4px rgb(0 0 0 / 5%);
+                }
+            }
+        }
+    }
+}
 /** 10. End Contact **/
 
 /** 11 Start Footer **/
 .footer {
+    padding: 50px 0;
     .footer__logo {
         img {
             height: 36px;
         }
     }
+    .footer__intro {
+        margin: 10px 0 20px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #888;
+    }
     .footer__items {
         h4 {
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
+            color: #444444;
+        }
+        ul {
+            margin: 15px 0 0;
+            padding: 0;
+            li {
+                margin: 0 0 10px;
+                list-style: none;
+                a {
+                    font-size: 16px;
+                    color: #888;
+                    font-weight: 400;
+                    transform: translate(0, 0);
+                    display: inline-block;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transform: translate(5px, 0px);
+                        color: #ff8604;
+                    }
+                }
+
+            }
         }
     }
     .footer__social--list {
@@ -1526,6 +1606,7 @@ img {
     li {
         list-style: none;
         a {
+            margin: 0 10px 0 0;
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -1535,6 +1616,7 @@ img {
             width: 30px;
             height: 30px;
             background-color: var(--bg-social-icon);
+            border: 1px solid;
         }
         &:hover {
             a {
