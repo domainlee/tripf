@@ -974,8 +974,12 @@ img {
 
 .popular-search {
     padding: 50px 0;
+    .heading-default {
+        margin: 0 0 20px;
+        font-size: 32px;
+    }
     .popular-search__list {
-        padding: 80px;
+        padding: 60px 80px;
         text-align: center;
         background-color: #fff9e6;
         border-radius: 20px;
@@ -1003,12 +1007,40 @@ img {
     padding: 50px 0;
     position: relative;
     .blog__inner {
+        margin: 0 -15px;
         display: flex;
         .blog__left {
+            padding: 0 15px;
             width: 50%;
+            .blog__left--item {
+                figure {
+                    border-radius: 15px;
+                }
+                .blog__left--title {
+                    margin: 15px 0;
+                    font-weight: 700;
+                    font-size: 32px;
+                }
+                .blog__left--sub {
+                    margin: 15px 0 0;
+                }
+            }
         }
         .blog__right {
+            padding: 0 15px;
             width: 50%;
+            .blog__items {
+                margin: 0 0 15px;
+                figure {
+                    border-radius: 10px;
+                }
+                .blog__items--content {
+                    h3 {
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     }
 }
@@ -1020,18 +1052,20 @@ img {
 
 /** 11 Start Footer **/
 .footer {
-    background-color: var(--bg-section);
-    color: var(--text);
     .footer__logo {
         img {
             height: 36px;
         }
     }
+    .footer__items {
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
     .footer__social--list {
         padding: 0;
-        text-align: center;
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
         li {
             list-style: none;
@@ -1476,8 +1510,13 @@ img {
 /*** 13. End Typography **/
 
 /** 14. Start Custom Style **/
-body.my-blog__popup--js {
-    overflow: hidden;
+
+.entry {
+    font-size: 16px;
+    .entry__category {
+        margin: 0 5px 0 0;
+        font-weight: 600;
+    }
 }
 .social {
     margin: 0;
