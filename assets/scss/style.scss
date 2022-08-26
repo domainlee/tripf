@@ -1143,11 +1143,12 @@ img {
                     left: 0;
                     right: 0;
                     z-index: 0;
-                    transition: all 0.8s ease;
-                    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 57%, rgba(0,0,0,0.4) 100%);
-                    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 57%,rgba(0,0,0,0.4) 100%);
-                    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 57%,rgba(0,0,0,0.4) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 );
+                    transition: opacity 0.5s ease;
+                    background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.69) 26%, rgba(0,0,0,0.7) 27%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.69) 26%,rgba(0,0,0,0.7) 27%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.69) 26%,rgba(0,0,0,0.7) 27%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+                    opacity: 0.3;
                 }
                 .guides__content {
                     padding: 30px;
@@ -1189,10 +1190,7 @@ img {
                 }
                 &:hover {
                     &:after {
-                        background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.69) 26%, rgba(0,0,0,0.7) 27%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
-                        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.69) 26%,rgba(0,0,0,0.7) 27%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
-                        background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.69) 26%,rgba(0,0,0,0.7) 27%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+                        opacity: 0.8;
                     }
                     .guides__content {
                         > .guides__name {
