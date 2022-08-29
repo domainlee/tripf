@@ -458,6 +458,31 @@
         }
     }
 
+    var accordion = function () {
+        if ($('.accordion--js').length) {
+            var accordions = $('.accordion--js');
+            accordions.each(function () {
+                var accordion_item = $(this).data('grp-name');
+                var t = $(this);
+                var accordion = t.find('.accrodion');
+                t.addClass(accordion_item);
+                t.find('.accrodion .accrodion-content').hide();
+                t.find('.accrodion.active').find('.accrodion-content').show();
+                accordion.each(function() {
+                    $(this).find('.accrodion-title').on('click', function () {
+                        if ($(this).parent().hasClass('active') === false ) {
+                            $('.accordion--js.'+accordion_item).find('.accrodion').removeClass('active');
+                            $('.accordion--js.'+accordion_item).find('.accrodion').find('.accrodion-content').slideUp();
+                            $(this).parent().addClass('active');
+                            $(this).parent().find('.accrodion-content').slideDown();
+                        };
+                    });
+                });
+            });
+
+        };
+    }
+
     var TextType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -511,6 +536,7 @@
         skill();
         component_blog();
         dark();
+        accordion();
 
         $(document).on( 'scroll', function(){
             animation();

@@ -1245,6 +1245,27 @@ img {
     }
 }
 
+.faq {
+    padding: 50px 0;
+    .accrodion {
+        margin: 0 0 30px;
+        padding: 30px;
+        border: 1px solid #c9c9c9;
+        border-radius: 10px;
+        .accrodion-title {
+            h5 {
+                margin: 0;
+            }
+        }
+        .accrodion-content {
+            margin: 15px 0 0;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
 /** 11 Start Footer **/
 .footer {
     padding: 50px 0;
@@ -1279,7 +1300,7 @@ img {
                     display: inline-block;
                     transition: all 0.3s ease;
                     &:hover {
-                        transform: translate(5px, 0px);
+                        transform: translate(2px, 0px);
                         color: #ff8604;
                     }
                 }
