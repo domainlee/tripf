@@ -213,6 +213,28 @@
             }
         });
 
+        $('.guides__js').owlCarousel({
+            loop: true,
+            margin: 30,
+            dots: false,
+            nav: true,
+            lazyLoad: true,
+            autoplay: true,
+            items: 4,
+            navText : ["<i class='icofont-rounded-left'></i>","<i class='icofont-rounded-right'></i>"],
+            responsive: {
+                0: {
+                    nav: false,
+                },
+                480: {
+                    nav: false,
+                },
+                768: {
+                    nav: true,
+                }
+            }
+        });
+
 
 
     };

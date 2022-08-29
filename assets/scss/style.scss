@@ -963,6 +963,20 @@ img {
             }
         }
     }
+    .resort-surprises__phone {
+        display: flex;
+        align-items: center;
+        margin: 30px 0 0;
+        i {
+            font-size: 52px;
+            color: #ff8605;
+            margin: 0 10px 0 0;
+        }
+        strong {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
 }
 
 .explore-destinations {
@@ -1121,11 +1135,7 @@ img {
 .guides {
     padding: 50px 0;
     .guides__list {
-        margin: 0 -15px;
-        display: flex;
         .guides__item {
-            padding: 0 15px;
-            width: 25%;
             .guides__image {
                 margin: 0;
                 background-size: 100% auto;
@@ -1204,6 +1214,31 @@ img {
                             transform: translate(0, 0);
                         }
                     }
+                }
+            }
+        }
+        .owl-nav {
+            button {
+                width: 50px;
+                height: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: $color-black;
+                background-color: $color-white;
+                position: absolute;
+                top: 40%;
+                box-shadow: 0 0 9px 8px #0000000d;
+                &.owl-prev {
+                    left: -30px;
+                }
+                &.owl-next {
+                    right: -30px;
+                }
+                &:hover {
+                    background-color: $color-black;
+                    color: $color-white;
                 }
             }
         }
