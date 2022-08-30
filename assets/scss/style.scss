@@ -1338,6 +1338,21 @@ img {
     }
 }
 
+.tour-detail {
+    .tour-detail__left {
+        .tour-detail__review  {
+            margin: 0 0 15px;
+            i {
+                color: orange;
+            }
+        }
+        .tour-detail__heading {
+            font-size: 36px;
+            font-weight: 700;
+        }
+    }
+}
+
 /** 11 Start Footer **/
 .footer {
     padding: 50px 0;
@@ -1773,6 +1788,9 @@ img {
         font-weight: 500;
         text-decoration: underline;
     }
+    ul {
+        padding-left: 16px;
+    }
     figure {
         display: flex;
         flex-direction: column;
@@ -1827,6 +1845,18 @@ img {
 /*** 13. End Typography **/
 
 /** 14. Start Custom Style **/
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        &:not(:last-child):after {
+            margin: 0 10px;
+            content: "\f105";
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+    }
+}
 .pagination-wrapper {
     .pagination-list {
         margin: 30px 0 0;
