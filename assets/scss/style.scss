@@ -674,7 +674,7 @@ img {
         margin: 30px 0 0;
         padding: 0 15px;
         width: 25%;
-        .discount & {
+        .discount &, .three__item & {
             width: 33.33333%;
         }
         .destinations__item--inner {
@@ -1249,18 +1249,90 @@ img {
     padding: 50px 0;
     .accrodion {
         margin: 0 0 30px;
-        padding: 30px;
+        padding: 20px;
         border: 1px solid #c9c9c9;
         border-radius: 10px;
+        &.active {
+            background-color: #ff8604;
+            border-color: #ff8604;
+            color: #FFF;
+            .accrodion-title {
+                h5 {
+                    &:after {
+                        -webkit-transform: rotate(90deg);
+                        -moz-transform: rotate(90deg);
+                        -o-transform: rotate(90deg);
+                        -ms-transform: rotate(90deg);
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
         .accrodion-title {
             h5 {
+                padding: 10px;
                 margin: 0;
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &:after {
+                    font: normal normal normal 14px/1 FontAwesome;
+                    content: "\f105";
+                    position: absolute;
+                    right: 10px;
+                    margin: auto;
+                    font-size: 24px;
+                    transition: all 0.3s ease;
+                }
             }
         }
         .accrodion-content {
-            margin: 15px 0 0;
+            margin: 10px;
             p {
                 margin: 0;
+            }
+        }
+    }
+    .faq__other {
+        p {
+            margin: 20px auto 0;
+            max-width: 400px;
+        }
+    }
+}
+
+.tour-gallery {
+    .tour-gallery__js {
+        background-color: $color-black;
+        .tour-gallery__item {
+            img {
+                max-height: 450px;
+            }
+        }
+        .owl-nav {
+            button {
+                width: 50px;
+                height: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: $color-black;
+                background-color: $color-white;
+                position: absolute;
+                top: 40%;
+                box-shadow: 0 0 9px 8px #0000000d;
+                &.owl-prev {
+                    left: 30px;
+                }
+                &.owl-next {
+                    right: 30px;
+                }
+                &:hover {
+                    background-color: $color-black;
+                    color: $color-white;
+                }
             }
         }
     }
@@ -1755,7 +1827,37 @@ img {
 /*** 13. End Typography **/
 
 /** 14. Start Custom Style **/
-
+.pagination-wrapper {
+    .pagination-list {
+        margin: 30px 0 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li {
+            a {
+                margin: 0 5px;
+                width: 40px;
+                height: 40px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+                border: 1px solid #DDD;
+                border-radius: 50%;
+                font-size: 14px;
+                transition: all 0.3s ease;
+            }
+            &.active, &:hover {
+                a {
+                    background-color: #ff8604;
+                    color: #FFF;
+                    border-color: #ff8604;
+                }
+            }
+        }
+    }
+}
 .entry {
     font-size: 16px;
     .entry__category {
