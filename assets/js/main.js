@@ -369,7 +369,7 @@
         var button = $('.button-form-extra');
         button.each(function () {
             var b = $(this);
-            var c = b.closest('.destinations__form--item');
+            var c = b.closest('.destinations__form--item, .tour-detail__right--item');
             b.click(function () {
                 c.toggleClass('active');
             });
