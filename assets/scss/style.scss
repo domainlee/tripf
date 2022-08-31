@@ -446,6 +446,7 @@ img {
                 border-radius: 50%;
                 background-color: #000;
                 color: #FFF;
+                cursor: pointer;
             }
             input.form-extra__passenger--number {
                 width: 100px;
@@ -1387,6 +1388,11 @@ img {
                 color: #FFF;
                 font-weight: 600;
                 @extend .bg-orange-gradient;
+                transition: all .3s ease;
+                &:hover {
+                    transform: translate(0, -2px);
+                    box-shadow: 0 4px 10px 4px rgb(0 0 0 / 5%);
+                }
             }
             &.active {
                 .form-extra {
