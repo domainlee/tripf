@@ -1049,6 +1049,7 @@ img {
                 margin: 0 0 15px;
                 transition: all 0.5s ease;
                 transform: translate(0, 0);
+                width: 100%;
                 &:hover {
                     transform: translate(5px, 0);
                 }
@@ -1060,6 +1061,29 @@ img {
                         font-size: 24px;
                         font-weight: 600;
                     }
+                }
+            }
+        }
+    }
+    .blog__list {
+        &.blog__list--extra {
+            margin: 0 -15px;
+            display: flex;
+            flex-wrap: wrap;
+            .blog__items {
+                margin: 0 0 30px 0;
+                padding: 0 15px;
+                width: 33.3333%;
+                figure {
+                    border-radius: 10px;
+                }
+                h3 {
+                    margin: 20px 0 10px;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+                .blog__items--sub {
+                    margin: 15px 0 0;
                 }
             }
         }
@@ -1348,11 +1372,66 @@ img {
                     }
                 }
             }
+
+            .accrodion {
+                margin: 0 0 30px;
+                padding: 15px;
+                border: 1px solid #c9c9c9;
+                border-radius: 10px;
+                &.active {
+
+                    .accrodion-title {
+                        h5 {
+                            &:after {
+                                -webkit-transform: rotate(90deg);
+                                -moz-transform: rotate(90deg);
+                                -o-transform: rotate(90deg);
+                                -ms-transform: rotate(90deg);
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                }
+                .accrodion-title {
+                    h5 {
+                        padding: 10px;
+                        margin: 0;
+                        cursor: pointer;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        &:after {
+                            font: normal normal normal 14px/1 FontAwesome;
+                            content: "\f105";
+                            position: absolute;
+                            right: 10px;
+                            margin: auto;
+                            font-size: 20px;
+                            transition: all 0.3s ease;
+                        }
+                        strong {
+                            margin: 0 15px 0 0;
+                            padding: 5px 10px;
+                            background-color: #ff8605;
+                            color: $color-white;
+                            font-size: 16px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .accrodion-content {
+                    margin: 10px;
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+
         }
     }
     .tour-detail__right {
         padding: 50px;
-        border: 1px solid #DDD;
+        border: 1px solid #dedede;
         border-radius: 10px;
         .tour-detail__right--price {
             margin: 0 0 5px;
@@ -1377,7 +1456,7 @@ img {
             }
             input[type=date], input[type=text] {
                 padding: 10px 15px;
-                border: 1px solid #000;
+                border: 1px solid #dedede;
                 border-radius: 5px;
             }
             input[type=submit] {
