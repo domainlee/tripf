@@ -541,6 +541,12 @@
         }, delta);
     }
 
+    var sidebarScroll = function() {
+        $('.sidebar-fixed').theiaStickySidebar({
+            additionalMarginTop: 75
+        });
+    }
+
     $(document).ready(function() {
         window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
         if(!isMobile()) {
@@ -560,6 +566,7 @@
         component_blog();
         dark();
         accordion();
+        sidebarScroll();
 
         $(document).on( 'scroll', function(){
             animation();

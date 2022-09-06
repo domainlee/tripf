@@ -1554,9 +1554,8 @@ img {
 .single-post {
     .single-post__title {
         margin: 0 0 10px;
-        font-weight: 500;
-        font-size: 48px;
-        font-family: "Noto Serif Display",serif;
+        font-weight: 700;
+        font-size: 32px;
     }
     .post_meta {
         display: inline-flex;
@@ -1612,7 +1611,6 @@ img {
         label {
             margin: 0;
             font-weight: 400;
-            text-transform: uppercase;
         }
         ul {
             margin: 0;
@@ -1640,7 +1638,8 @@ img {
         margin: 20px 0 0;
         padding: 20px;
         display: flex;
-        border: 1px solid;
+        background-color: #fff9e6;
+        border-radius: 10px;
         figure {
             margin: 0;
             a {
@@ -1649,6 +1648,8 @@ img {
                     width: 150px;
                     height: 150px;
                     object-fit: cover;
+                    max-width: inherit;
+                    border-radius: 10px;
                 }
             }
         }
@@ -1684,16 +1685,8 @@ img {
             margin: 0 0 15px;
             color: $color-black;
             padding: 0;
-            text-transform: uppercase;
             font-size: 22px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            &:after {
-                content: '';
-                display: block;
-                border-bottom: 1px solid $color-black;
-                margin: 8px 0 0;
-            }
+            font-weight: 600;
         }
         .related-post__list {
             margin: 0 -10px;
@@ -1707,18 +1700,18 @@ img {
                 }
                 .related-post__title {
                     margin: 5px 0 0;
-                    font-weight: 400;
+                    font-weight: 600;
                     font-size: 20px;
-                    font-family: "Noto Serif Display",serif;
                     a {
                         color: $color-black;
                     }
                 }
                 .related-post__image {
+                    margin: 0 0 10px;
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
-                    margin: 0 0 10px;
+                    border-radius: 10px;
                     &:before {
                         content: '';
                         display: block;
@@ -1754,20 +1747,16 @@ img {
                 }
             }
             span {
-                text-transform: uppercase;
-                font-size: 13px;
+                font-size: 14px;
                 color: #888;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
+                font-weight: 400;
             }
         }
         .single-post__nav--title {
             margin: 5px 0 0;
-            font-size: 26px;
-            font-family: "Noto Serif Display",serif;
-            font-weight: 500;
-        }
-        .single-post__nav--title:hover {
-            text-decoration: underline;
+            font-size: 24px;
+            font-weight: 700;
         }
         .single-post__nav--next {
             text-align: right;
@@ -1779,16 +1768,8 @@ img {
             margin: 0 0 15px;
             color: $color-black;
             padding: 0;
-            text-transform: uppercase;
             font-size: 22px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            &:after {
-                margin: 8px 0 0;
-                content: '';
-                display: block;
-                border-bottom: 1px solid $color-black;
-            }
+            font-weight: 600;
         }
         .commentlist {
             padding: 0;
@@ -1814,6 +1795,8 @@ img {
                     img {
                         object-fit: cover;
                         margin: 0 15px 0 0;
+                        max-width: inherit;
+                        border-radius: 10px;
                     }
                 }
                 .comment-details {
@@ -1822,9 +1805,8 @@ img {
                     flex: auto;
                     strong {
                         margin: 0 10px 0 0;
-                        font-size: 14px;
-                        text-transform: uppercase;
-                        font-weight: 500;
+                        font-size: 16px;
+                        font-weight: 600;
                     }
                 }
                 .comment-date {
@@ -1847,14 +1829,22 @@ img {
                     border-left: 1px solid #DDD;
                     padding: 0 0 0 20px;
                     a {
-                        text-transform: uppercase;
                         font-size: 13px;
                         background-color: $color-black;
                         color: $color-white;
                         padding: 2px 10px;
+                        border-radius: 5px;
+                        font-weight: 400;
                     }
                 }
             }
+        }
+        .comment-reply-title {
+            margin: 0 0 15px;
+            color: $color-black;
+            padding: 0;
+            font-size: 22px;
+            font-weight: 600;
         }
         .comment-form__row {
             margin: 0 -10px;
@@ -1865,14 +1855,14 @@ img {
             }
             input {
                 padding: 10px;
-                border: 1px solid $color-black;
+                border: 1px solid #DDD;
                 width: 100%;
+                border-radius: 8px;
                 transition: all 0.3s ease;
-                border-radius: 0;
                 -webkit-appearance: none;
                 &:focus {
                     outline: none;
-                    box-shadow: 2px 2px $color-black;
+                    border-color: #ff8604;
                 }
 
             }
@@ -1880,31 +1870,66 @@ img {
                 margin: 20px 10px;
                 padding: 15px;
                 width: 100%;
-                border: 1px solid $color-black;
+                border-radius: 8px;
+                border: 1px solid #DDD;
                 transition: all 0.3s ease;
-                border-radius: 0;
                 -webkit-appearance: none;
                 &:focus {
                     outline: none;
-                    box-shadow: 2px 2px $color-black;
+                    border-color: #ff8604;
                 }
             }
         }
         input[type=submit] {
-            background-color: $color-black;
-            color: $color-white;
+            background-color: #000;
+            color: #fff;
             border: none;
-            padding: 5px 15px;
-            text-transform: uppercase;
+            padding: 10px 25px;
             font-size: 18px;
-            letter-spacing: 1px;
-            border-radius: 0;
             -webkit-appearance: none;
+            border-radius: 8px;
         }
     }
 
 }
+
+
 /** 12. End Single Page **/
+
+/** Start Sidebar **/
+
+.widget-title {
+    border-bottom: 1px solid;
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.widget_instagram ul {
+    margin: 0 -5px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.widget_instagram ul li {
+    margin: 0 0 10px;
+    padding: 0 5px;
+    width: 33.3333%;
+    list-style: none;
+}
+.widget_instagram ul li figure {
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.widget_instagram ul li figure:before {
+    display: block;
+    padding-top: 75%;
+    content: '';
+}
+
+/** End Sidebar **/
 
 /** 13. Start Typography **/
 .editor-content {
@@ -1912,6 +1937,7 @@ img {
     img {
         max-width: 100%;
         display: block;
+        border-radius: 10px;
     }
     a {
         color: $color-black;
@@ -1921,11 +1947,18 @@ img {
     ul {
         padding-left: 16px;
     }
+    ol {
+        font-weight: 400;
+    }
+    p {
+        font-weight: 400;
+    }
     figure {
         display: flex;
         flex-direction: column;
         img {
             max-width: 100%;
+            border-radius: 10px;
         }
         figcaption {
             margin: 6px 0 0;
@@ -1949,9 +1982,13 @@ img {
     }
     blockquote {
         margin: 15px 0;
-        padding: 15px 30px;
+        padding: 30px;
         position: relative;
-        background-color: var(--bg-blockquote);
+        background-color: #fff9e6;
+        border-radius: 10px;
+        p {
+            margin: 0;
+        }
     }
     &.editor-content__col-two {
         columns: 2;

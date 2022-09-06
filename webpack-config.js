@@ -14,6 +14,8 @@ const config = {
             JS_DIR + '/jquery.validate.min.js',
             JS_DIR + '/jquery.magnific-popup.js',
             JS_DIR + '/modernizr-3.11.2.min.js',
+            JS_DIR + '/theia-sticky-sidebar.min.js',
+            JS_DIR + '/resize-sensor.min.js',
             JS_DIR + '/jquery.lazy.min.js',
             JS_DIR + '/main.js',
         ],
