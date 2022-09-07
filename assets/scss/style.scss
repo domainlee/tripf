@@ -1700,7 +1700,7 @@ img {
                 }
                 .related-post__title {
                     margin: 5px 0 0;
-                    font-weight: 600;
+                    font-weight: 700;
                     font-size: 20px;
                     a {
                         color: $color-black;
@@ -1712,11 +1712,6 @@ img {
                     background-repeat: no-repeat;
                     background-position: center;
                     border-radius: 10px;
-                    &:before {
-                        content: '';
-                        display: block;
-                        padding-top: 66.66%;
-                    }
                 }
             }
         }
@@ -1769,7 +1764,7 @@ img {
             color: $color-black;
             padding: 0;
             font-size: 22px;
-            font-weight: 600;
+            font-weight: 700;
         }
         .commentlist {
             padding: 0;
@@ -1892,44 +1887,174 @@ img {
     }
 
 }
-
-
 /** 12. End Single Page **/
 
 /** Start Sidebar **/
+.widget-item {
+    .widget-title {
+        border-bottom: 1px solid;
+        font-size: 20px;
+        padding: 10px 0;
+        font-weight: 700;
+    }
 
-.widget-title {
-    border-bottom: 1px solid;
-    font-size: 20px;
-    padding: 10px 0;
+    .widget_categories {
+        padding: 30px;
+        background-color: #fff9e6;
+        border-radius: 20px;
+        margin: 0 0 30px;
+        .widget-title {
+            border-bottom: none;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            li {
+                border-bottom: 1px dashed #DDDD;
+                padding: 10px 0;
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .post-type-three__right--list {
+        margin: 15px 0 0;
+        .post-type-three__right--item {
+            .post-type-three__right--image {
+                margin: 0;
+                border-radius: 10px;
+            }
+            .post-type-three__right--title {
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .widget_instagram {
+        ul {
+            margin: 15px -5px 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                margin: 0 0 10px;
+                padding: 0 5px;
+                width: 33.3333%;
+                list-style: none;
+                figure {
+                    margin: 0;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+/** End Sidebar **/
+
+
+/**** 11. Page Contact ***/
+.page-contact {
+    text-align: right;
+}
+.page-contact__headline h3 {
     font-weight: 700;
+    font-size: 62px;
+}
+.page-contact__headline > div {
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.page-contact__intro {
+    margin: 20px 0 0;
 }
 
-.widget_instagram ul {
-    margin: 0 -5px;
+.page-contact__social {
+    margin: 30px 0 0;
+}
+.page-contact__social ul {
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-end;
 }
-.widget_instagram ul li {
-    margin: 0 0 10px;
-    padding: 0 5px;
-    width: 33.3333%;
+.page-contact__social ul li {
     list-style: none;
 }
-.widget_instagram ul li figure {
-    margin: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.page-contact__social ul li a {
+    margin: 0 0 0 5px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #111;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #111;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
-.widget_instagram ul li figure:before {
-    display: block;
-    padding-top: 75%;
-    content: '';
+.page-contact__social ul li a:hover {
+    background-color: #111;
+    border-color: #111;
+    color: #FFF;
+    text-decoration: none;
+}
+.contact-form__row {
+    display: flex;
+    margin: 0 -10px 15px;
+}
+.contact-form__row > div {
+    width: 50%;
+    padding: 0 10px;
+}
+.contact-form__row .contact-form__title {
+    width: 100%;
+}
+.contact-form__row input {
+    width: 100%;
+    padding: 10px 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+}
+.contact-form__row input:focus, .contact-form__row textarea:focus {
+    outline: none;
+}
+.contact-form__row textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 0 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    border-color: #DDD;
+}
+.form-submit {
+    margin: 0;
+    input {
+        padding: 10px 30px;
+        border-radius: 10px;
+        background-color: #000;
+        color: #FFF;
+        border: none;
+    }
 }
 
-/** End Sidebar **/
+/**** 12  ***/
 
 /** 13. Start Typography **/
 .editor-content {
@@ -2058,7 +2183,7 @@ img {
 .entry {
     font-size: 16px;
     .entry__category {
-        margin: 0 5px 0 0;
+        margin: 0 0 0 5px;
         font-weight: 600;
     }
 }
