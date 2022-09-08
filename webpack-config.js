@@ -10,6 +10,7 @@ const CSS_DIR = ASSETS_DIR + '/scss';
 const config = {
     entry : {
         main: [
+            JS_DIR + '/isotope.pkgd.min.js',
             NODE_MODULES + '/owl.carousel/dist/owl.carousel.min.js',
             JS_DIR + '/jquery.validate.min.js',
             JS_DIR + '/jquery.magnific-popup.js',

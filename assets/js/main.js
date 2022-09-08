@@ -19,6 +19,17 @@
         });
     }
 
+    var masonry = function () {
+        var $grid = $('.gallery__js').isotope({
+            itemSelector: ".gallery__item",
+        });
+
+        // $('.filter-button-group').on( 'click', 'button', function() {
+        //     var filterValue = $(this).attr('data-filter');
+        //     $grid.isotope({ filter: filterValue });
+        // });
+    }
+
     var loadingMobile = function () {
         $('.loading').css('display', 'none');
         animation();
@@ -506,6 +517,8 @@
         };
     }
 
+
+
     var TextType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -554,6 +567,8 @@
         } else {
             loadingMobile();
         }
+
+        masonry();
         slider();
         nav();
         lazy();

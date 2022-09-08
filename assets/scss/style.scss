@@ -1483,6 +1483,17 @@ img {
     }
 }
 
+.gallery {
+    .gallery__list {
+        .gallery__item {
+            float: left;
+            width: 33.3333%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
 /** 11 Start Footer **/
 .footer {
     padding: 50px 0;
