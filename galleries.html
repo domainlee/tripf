@@ -66,7 +66,7 @@
             <button data-filter=":not(.transition)">not transition</button>
             <button data-filter=".metal:not(.transition)">metal but not transition</button>
         </div>
-        <div class="gallery__js gallery__list">
+        <div class="gallery__js gallery__list grid" data-isotope='{ "itemSelector": ".gallery__item", "layoutMode": "fitRows" }'>
             <div class="gallery__item metal"><img src="assets/images/john-fornander-y3_AHHrxUBY-unsplash.jpg" alt="tour 1" /></div>
             <div class="gallery__item alkali"><img src="assets/images/ian-mackey-Uzg0pq7pDCU-unsplash.jpg" alt="tour 1" /></div>
             <div class="gallery__item transition"><img src="assets/images/greg-rivers-rChFUMwAe7E-unsplash.jpg" alt="tour 1" /></div>
@@ -165,6 +165,7 @@
     <!-- end footer -->
 
     <!-- start script -->
+    <script src="https://valik.kwst.net/js/jquery.min.js"></script>
     <script src="assets/build/js/main.bundle.js"></script>
     <!-- end script -->
 

@@ -14,15 +14,24 @@
             $('.loading').delay(666).fadeOut('slow');
             $('body').delay(666);
             animation();
-            skill();
-            typing();
         });
     }
 
     var masonry = function () {
-        var $grid = $('.gallery__js').isotope({
-            itemSelector: ".gallery__item",
+
+        $('.grid').isotope({
+            // options
+            itemSelector: '.gallery__item',
+            layoutMode: 'fitRows'
         });
+
+        // var elem = document.querySelector('.gallery__js');
+        // var iso = new Isotope( elem, {
+        //     // options
+        //     itemSelector: '.gallery__item',
+        //     layoutMode: 'fitRows'
+        // });
+
 
         // $('.filter-button-group').on( 'click', 'button', function() {
         //     var filterValue = $(this).attr('data-filter');
@@ -33,23 +42,6 @@
     var loadingMobile = function () {
         $('.loading').css('display', 'none');
         animation();
-        skill();
-        typing();
-    }
-
-    var typing = function () {
-        var elements = document.getElementsByClassName('type--js');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TextType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".type--js > .wrap { border-right: 0.08em solid #000000}";
-        document.body.appendChild(css);
     }
 
     var slider = function () {
@@ -272,17 +264,6 @@
 
 
     };
-
-    var skill = function () {
-        let skill_item = $('.my-resume__skill--item');
-        skill_item.each(function (k, v) {
-            var t = $(this);
-            let count = t.find('.my-resume__skill--precent');
-            let precent = count.attr('data-precent');
-            count.find('div').addClass('width-' + precent);
-            count.find('span').text(precent + '%');
-        });
-    }
 
     var animation = function () {
         let viewPorts = $('*[data-viewport]');
@@ -577,7 +558,6 @@
         popup();
         form();
         form_search();
-        skill();
         component_blog();
         dark();
         accordion();

@@ -10,7 +10,6 @@ const CSS_DIR = ASSETS_DIR + '/scss';
 const config = {
     entry : {
         main: [
-            JS_DIR + '/isotope.pkgd.min.js',
             NODE_MODULES + '/owl.carousel/dist/owl.carousel.min.js',
             JS_DIR + '/jquery.validate.min.js',
             JS_DIR + '/jquery.magnific-popup.js',
@@ -19,6 +18,7 @@ const config = {
             JS_DIR + '/resize-sensor.min.js',
             JS_DIR + '/jquery.lazy.min.js',
             JS_DIR + '/main.js',
+            JS_DIR + '/isotope.pkgd.min.js',
         ],
         '../css/main': [CSS_DIR + '/main.scss', NODE_MODULES + '/font-awesome/scss/font-awesome.scss'],
     },
@@ -59,11 +59,11 @@ const config = {
         new MiniCssExtractPlugin({
             filename: "../css/[name].min.css",
         }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery'
-        })
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        //     'window.jQuery': 'jquery'
+        // })
     ],
 }
 
