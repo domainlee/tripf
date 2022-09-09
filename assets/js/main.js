@@ -18,25 +18,22 @@
     }
 
     var masonry = function () {
+        var $ = require('jquery');
+        var jQueryBridget = require('jquery-bridget');
+        var Isotope = require('isotope-layout');
+        jQueryBridget( 'isotope', Isotope, $ );
 
-        $('.grid').isotope({
+        var $grid = $('.grid');
+        $grid.isotope({
             // options
             itemSelector: '.gallery__item',
-            layoutMode: 'fitRows'
+            layoutMode: 'masonry'
         });
 
-        // var elem = document.querySelector('.gallery__js');
-        // var iso = new Isotope( elem, {
-        //     // options
-        //     itemSelector: '.gallery__item',
-        //     layoutMode: 'fitRows'
-        // });
-
-
-        // $('.filter-button-group').on( 'click', 'button', function() {
-        //     var filterValue = $(this).attr('data-filter');
-        //     $grid.isotope({ filter: filterValue });
-        // });
+        $('.filter-button-group').on( 'click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
     }
 
     var loadingMobile = function () {

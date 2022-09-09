@@ -58,22 +58,29 @@
 
     <!-- start gallery-->
     <section class="gallery">
-        <div class="button-group filter-button-group">
-            <button data-filter="*">show all</button>
-            <button data-filter=".metal">metal</button>
-            <button data-filter=".transition">transition</button>
-            <button data-filter=".alkali, .alkaline-earth">alkali & alkaline-earth</button>
-            <button data-filter=":not(.transition)">not transition</button>
-            <button data-filter=".metal:not(.transition)">metal but not transition</button>
-        </div>
-        <div class="gallery__js gallery__list grid" data-isotope='{ "itemSelector": ".gallery__item", "layoutMode": "fitRows" }'>
-            <div class="gallery__item metal"><img src="assets/images/john-fornander-y3_AHHrxUBY-unsplash.jpg" alt="tour 1" /></div>
-            <div class="gallery__item alkali"><img src="assets/images/ian-mackey-Uzg0pq7pDCU-unsplash.jpg" alt="tour 1" /></div>
-            <div class="gallery__item transition"><img src="assets/images/greg-rivers-rChFUMwAe7E-unsplash.jpg" alt="tour 1" /></div>
-            <div class="gallery__item alkaline"><img src="assets/images/darren-lawrence-tulum-mexico-unsplash.jpg" alt="tour 1" /></div>
-            <div class="gallery__item alkaline"><img src="assets/images/r-architecture-Cn87TISYij8-unsplash.jpg" alt="tour 1" /></div>
-            <div class="gallery__item transition"><img src="assets/images/stephen-leonardi-XKIO6ZgCObo-unsplash.jpg" alt="tour 1" /></div>
-            <div class="gallery__item metal"><img src="assets/images/vitor-paladini-natal-brazil-unsplash.jpg" alt="tour 1" /></div>
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="button-group filter-button-group">
+                        <button data-filter="*">show all</button>
+                        <button data-filter=".metal">metal</button>
+                        <button data-filter=".transition">transition</button>
+                        <button data-filter=".alkali, .alkaline-earth">alkali & alkaline-earth</button>
+                        <button data-filter=":not(.transition)">not transition</button>
+                        <button data-filter=".metal:not(.transition)">metal but not transition</button>
+                    </div>
+                    <div class="gallery__js gallery__list grid">
+                        <div class="gallery__item metal"><img src="assets/images/john-fornander-y3_AHHrxUBY-unsplash.jpg" alt="tour 1" /></div>
+                        <div class="gallery__item alkali"><img src="assets/images/ian-mackey-Uzg0pq7pDCU-unsplash.jpg" alt="tour 1" /></div>
+                        <div class="gallery__item transition"><img src="assets/images/greg-rivers-rChFUMwAe7E-unsplash.jpg" alt="tour 1" /></div>
+                        <div class="gallery__item alkaline"><img src="assets/images/darren-lawrence-tulum-mexico-unsplash.jpg" alt="tour 1" /></div>
+                        <div class="gallery__item alkaline"><img src="assets/images/r-architecture-Cn87TISYij8-unsplash.jpg" alt="tour 1" /></div>
+                        <div class="gallery__item transition"><img src="assets/images/stephen-leonardi-XKIO6ZgCObo-unsplash.jpg" alt="tour 1" /></div>
+                        <div class="gallery__item metal"><img src="assets/images/vitor-paladini-natal-brazil-unsplash.jpg" alt="tour 1" /></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- end gallery-->
@@ -165,7 +172,6 @@
     <!-- end footer -->
 
     <!-- start script -->
-    <script src="https://valik.kwst.net/js/jquery.min.js"></script>
     <script src="assets/build/js/main.bundle.js"></script>
     <!-- end script -->
 
