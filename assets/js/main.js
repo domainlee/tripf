@@ -25,14 +25,23 @@
 
         var $grid = $('.grid');
         $grid.isotope({
-            // options
             itemSelector: '.gallery__item',
             layoutMode: 'masonry'
         });
 
         $('.filter-button-group').on( 'click', 'button', function() {
+            var button = $('.filter-button-group button');
+            button.removeClass('active');
+            $(this).addClass('active');
+
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({ filter: filterValue });
+        });
+
+        var testimonials__list = $('.testimonials__list');
+        testimonials__list.isotope({
+            itemSelector: '.testimonials__item',
+            layoutMode: 'masonry'
         });
     }
 
