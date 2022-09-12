@@ -1656,6 +1656,67 @@ img {
     }
 }
 
+.login {
+    .better-experience {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+        .better-experience__item {
+            margin: 0 0 30px;
+            padding: 0 15px;
+            width: 50%;
+            i {
+                margin: 0 0 15px;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: 26px;
+                position: relative;
+                border: 1px solid #000;
+                color: #000;
+                transition: border-color .2s ease;
+            }
+            h4 {
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+    }
+    .login__right {
+        padding: 50px;
+        border: 1px solid #DDD;
+        border-radius: 15px;
+        > label {
+            font-weight: 700;
+            font-size: 32px;
+            margin: 0 0 15px;
+        }
+        .login__right--sub {
+            margin: 0 0 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            input {
+                margin: 0 0 15px;
+                padding: 10px 15px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+            }
+            button {
+                border: none;
+                padding: 10px 15px;
+                border-radius: 10px;
+                color: $color-white;
+                @extend .bg-orange-gradient;
+            }
+        }
+    }
+}
+
 /** 11 Start Footer **/
 .footer {
     padding: 50px 0;
