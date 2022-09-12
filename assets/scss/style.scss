@@ -51,10 +51,9 @@ $color-black: #000000;
 $color-grey: #666666;
 
 body {
-    font-weight: 300;
+    font-weight: 400;
     background-color: $color-white;
     font-family: 'Red Hat Display', sans-serif;
-    transition: all 0.5s ease;
 }
 ::selection {
     background: var(--bg-selection);
@@ -168,7 +167,6 @@ img {
 /** 3. Start Header **/
 .header {
     z-index: 5;
-    overflow: hidden;
     width: 100%;
     position: fixed;
     top: 0;
@@ -191,32 +189,47 @@ img {
         }
         .header__nav {
             .header__navigation {
-                li {
-                    a {
-                        padding: 20px 15px;
+                > li {
+                    position: relative;
+                   > a {
+                        padding: 35px 15px;
                         font-weight: 400;
                         font-size: 16px;
                         font-family: 'Red Hat Display', sans-serif;
                         text-align: center;
                         position: relative;
                         color: var(--text);
-                        &:after {
-                            margin: 2px auto 0;
-                            content: '';
-                            width: 50px;
-                            height: 12px;
-                            display: block;
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            position: absolute;
-                            left: 0;
-                            right: 0;
-                            transition: opacity 0.3s ease;
-                            opacity: 0;
-                        }
+
                         &.active {
-                            &:after {
-                                opacity: 1;
+
+                        }
+                    }
+                    > ul {
+                        margin: 0;
+                        padding: 0 20px;
+                        position: absolute;
+                        top: 92px;
+                        width: 300px;
+                        right: 0;
+                        background-color: #fff9e6;
+                        z-index: 1000;
+                        border-radius: 10px;
+                        .head__show & {
+                            top: 82px;
+                        }
+                        > li {
+                            list-style: none;
+                            border-bottom: 1px dashed #DDD;
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            > a {
+                                padding: 15px 0;
+                                color: #000;
+                                transition: all 0.3s ease;
+                                &:hover {
+                                    transform: translate(-2px, 0);
+                                }
                             }
                         }
                     }
