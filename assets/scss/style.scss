@@ -206,10 +206,10 @@ img {
                     }
                     > ul {
                         margin: 0;
-                        padding: 0 20px;
+                        padding: 0;
                         position: absolute;
                         top: 92px;
-                        width: 300px;
+                        width: 250px;
                         right: 0;
                         background-color: #fff9e6;
                         z-index: 1000;
@@ -218,17 +218,52 @@ img {
                             top: 82px;
                         }
                         > li {
+                            padding: 0 20px;
                             list-style: none;
-                            border-bottom: 1px dashed #DDD;
+                            position: relative;
                             &:last-child {
-                                border-bottom: none;
+                                > a {
+                                    border-bottom: none;
+                                }
                             }
                             > a {
                                 padding: 15px 0;
                                 color: #000;
                                 transition: all 0.3s ease;
+                                border-bottom: 1px dashed #DDD;
                                 &:hover {
-                                    transform: translate(-2px, 0);
+                                    transform: translate(2px, 0px);
+                                    color: #ff8604;
+                                }
+                            }
+                            > ul {
+                                position: absolute;
+                                width: 250px;
+                                right: -250px;
+                                padding: 0;
+                                list-style: none;
+                                background-color: #fff9e6;
+                                top: 0;
+                                border-radius: 10px;
+                                > li {
+                                    padding: 0 20px;
+                                    list-style: none;
+                                    position: relative;
+                                    &:last-child {
+                                        > a {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                    > a {
+                                        padding: 15px 0;
+                                        color: #000;
+                                        transition: all 0.3s ease;
+                                        border-bottom: 1px dashed #DDD;
+                                        &:hover {
+                                            transform: translate(2px, 0px);
+                                            color: #ff8604;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1686,9 +1721,13 @@ img {
         }
     }
     .login__right {
+        margin: -150px 0 0;
         padding: 50px;
         border: 1px solid #DDD;
         border-radius: 15px;
+        background-color: #FFF;
+        z-index: 5;
+        position: relative;
         > label {
             font-weight: 700;
             font-size: 32px;
@@ -1713,6 +1752,22 @@ img {
                 color: $color-white;
                 @extend .bg-orange-gradient;
             }
+        }
+        .button-login-facebook {
+            background-color: #4267B2;
+            color: #FFF;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button-login-google {
+            background-color: #DB4437;
+            color: #FFF;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
         }
     }
 }
