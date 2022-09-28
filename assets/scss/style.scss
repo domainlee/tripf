@@ -181,6 +181,7 @@ img {
     }
     .header_inner {
         height: 90px;
+        justify-content: space-between;
         .header__logo {
             line-height: 0;
             img {
@@ -191,7 +192,23 @@ img {
             .header__navigation {
                 > li {
                     position: relative;
-                   > a {
+                    &:hover {
+                        > ul {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translate(0px, 0px);
+                        }
+                    }
+                    > &.menu-item-has-children {
+                        > a {
+                            &:after {
+                                content: "\f107";
+                                margin: 0 0 0 10px;
+                                font: 14px / 1 FontAwesome;
+                            }
+                        }
+                    }
+                    > a {
                         padding: 35px 15px;
                         font-weight: 400;
                         font-size: 16px;
@@ -199,9 +216,9 @@ img {
                         text-align: center;
                         position: relative;
                         color: var(--text);
-
-                        &.active {
-
+                        transition: all 0.3s ease;
+                        &:hover {
+                            color: #ff8604;
                         }
                     }
                     > ul {
@@ -214,6 +231,10 @@ img {
                         background-color: #fff9e6;
                         z-index: 1000;
                         border-radius: 10px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translate(15px, 0px);
+                        transition: all 0.5s ease;
                         .head__show & {
                             top: 82px;
                         }
@@ -226,13 +247,29 @@ img {
                                     border-bottom: none;
                                 }
                             }
+                            &:hover {
+                                > ul {
+                                    opacity: 1;
+                                    visibility: visible;
+                                    transform: translate(0px, 0px);
+                                }
+                            }
+                            > &.menu-item-has-children {
+                                > a {
+                                    &:after {
+                                        content: "\f105";
+                                        margin: 0 0 0 auto;
+                                        font: 14px / 1 FontAwesome;
+                                    }
+                                }
+                            }
                             > a {
                                 padding: 15px 0;
                                 color: #000;
                                 transition: all 0.3s ease;
                                 border-bottom: 1px dashed #DDD;
+                                display: flex;
                                 &:hover {
-                                    transform: translate(2px, 0px);
                                     color: #ff8604;
                                 }
                             }
@@ -245,6 +282,10 @@ img {
                                 background-color: #fff9e6;
                                 top: 0;
                                 border-radius: 10px;
+                                opacity: 0;
+                                visibility: hidden;
+                                transform: translate(15px, 0px);
+                                transition: all 0.5s ease;
                                 > li {
                                     padding: 0 20px;
                                     list-style: none;
@@ -260,7 +301,6 @@ img {
                                         transition: all 0.3s ease;
                                         border-bottom: 1px dashed #DDD;
                                         &:hover {
-                                            transform: translate(2px, 0px);
                                             color: #ff8604;
                                         }
                                     }
@@ -273,6 +313,25 @@ img {
         }
         .head__show & {
             height: 70px;
+        }
+    }
+    .header__control {
+        margin: 0 0 0 auto;
+        .header__control--bt1 {
+            margin: 0 5px 0 0;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #000;
+            font-weight: 400;
+        }
+        .header__control--bt2 {
+            margin: 0;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 1px solid #000;
+            color: #000;
+            font-weight: 400;
         }
     }
 }
@@ -1153,8 +1212,8 @@ img {
                 }
                 .blog__items--content {
                     h3 {
-                        font-size: 24px;
-                        font-weight: 600;
+                        font-size: 22px;
+                        font-weight: 700;
                     }
                 }
             }
@@ -1175,12 +1234,31 @@ img {
                 h3 {
                     margin: 20px 0 10px;
                     font-size: 24px;
-                    font-weight: 600;
+                    font-weight: 700;
                 }
                 .blog__items--sub {
                     margin: 15px 0 0;
                 }
             }
+        }
+    }
+    .blog-image {
+        margin: 0 0 15px;
+        border-radius: 10px;
+    }
+    .blog-list__title {
+        margin: 15px 0 10px;
+        font-weight: 700;
+        font-size: 36px;
+    }
+    .blog-grid__title {
+        margin: 15px 0 10px;
+        font-weight: 700;
+        font-size: 26px;
+    }
+    .blog-list__link {
+        a {
+            color: #ff8604;
         }
     }
 }
@@ -2190,7 +2268,7 @@ img {
     .widget_categories {
         padding: 30px;
         background-color: #fff9e6;
-        border-radius: 20px;
+        border-radius: 10px;
         margin: 0 0 30px;
         .widget-title {
             border-bottom: none;
@@ -2472,7 +2550,7 @@ img {
 .entry {
     font-size: 16px;
     .entry__category {
-        margin: 0 0 0 5px;
+        margin: 0 5px 0 0;
         font-weight: 600;
     }
 }
