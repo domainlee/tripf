@@ -222,6 +222,28 @@
             }
         });
 
+        $('.top-destinations-five__js').owlCarousel({
+            loop: true,
+            margin: 20,
+            dots: false,
+            nav: true,
+            lazyLoad: true,
+            autoplay: true,
+            items: 5,
+            navText : ["<i class='icofont-rounded-left'></i>","<i class='icofont-rounded-right'></i>"],
+            responsive: {
+                0: {
+                    nav: false,
+                },
+                480: {
+                    nav: false,
+                },
+                768: {
+                    nav: true,
+                }
+            }
+        });
+
         $('.guides__js').owlCarousel({
             loop: true,
             margin: 30,
