@@ -39,9 +39,10 @@
                             </a>
                         </div>
                         <div class="header__menu ms-auto d-flex flex-row justify-content-center align-items-center">
-                            <div class="header__nav d-flex align-items-center justify-content-center mx-0 mx-lg-3">
+                            <!-- start nav desktop -->
+                            <div class="header__nav d-none d-lg-flex align-items-center justify-content-center mx-0 mx-lg-3">
                                 <ul class="header__navigation nav d-flex flex-column flex-lg-row justify-content-center align-items-center">
-                                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                                     <li class="nav-item menu-item-has-children">
                                         <a class="nav-link" href="tours.html">Tour</a>
                                         <ul>
@@ -59,7 +60,7 @@
                                     <li class="nav-item"><a class="nav-link" href="galleries.html">Gallery</a></li>
 
                                     <li class="nav-item menu-item-has-children">
-                                        <a class="nav-link" href="#about">Page</a>
+                                        <a class="nav-link" href="about.html">Page</a>
                                         <ul>
                                             <li class="nav-item menu-item-has-children">
                                                 <a class="nav-link" href="blog.html">Blog</a>
@@ -87,9 +88,64 @@
                                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
+                            <!-- end nav desktop -->
+                            <!-- start nav mobile -->
+                            <div class="header__nav--mobile d-flex d-lg-none flex-column align-items-center justify-content-center mx-0 mx-lg-3">
+                                <ul class="header__navigation nav d-flex flex-column flex-lg-row justify-content-center px-5 col-12 col-sm-8 mx-auto">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="tours.html">Tour</a>
+                                        <ul>
+                                            <li class="nav-item"><a class="nav-link" href="tours.html">Tour</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="tour-details.html">Tour Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="destination.html">Destination</a>
+                                        <ul>
+                                            <li class="nav-item"><a class="nav-link" href="destination.html">Destination</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="tour-details.html">Destination Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="galleries.html">Gallery</a></li>
+
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="about.html">Page</a>
+                                        <ul>
+                                            <li class="nav-item menu-item-has-children">
+                                                <a class="nav-link" href="blog.html">Blog</a>
+                                                <ul>
+                                                    <li class="nav-item"><a class="nav-link" href="blog-grid.html">Blog Grid</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="blog-list.html">Blog List</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="post.html">Single Post</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item menu-item-has-children">
+                                                <a class="nav-link" href="about.html">About</a>
+                                                <ul>
+                                                    <li class="nav-item"><a class="nav-link" href="guides.html">Team</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                                <div class="header__control mt-5">
+                                    <a class="header__control--bt1" href="contact.html">Become Partner</a>
+                                    <a class="header__control--bt2" href="login.html">Login / Register</a>
+                                </div>
+                            </div>
+                            <!-- end nav mobile -->
                             <a class="header__button-menu d-inline-flex d-lg-none"></a>
                         </div>
-                        <div class="header__control">
+                        <div class="header__control d-none d-lg-block">
                             <a class="header__control--bt1" href="contact.html">Become Partner</a>
                             <a class="header__control--bt2" href="login.html">Login / Register</a>
                         </div>
@@ -118,7 +174,7 @@
                 </figure>
                 <div class="destinations__form">
                     <div class="d-flex align-items-center mb-4">
-                        <ul class="destinations__form--nav nav d-flex m-0" data-viewport="opacity">
+                        <ul class="destinations__form--nav nav d-flex justify-content-center justify-content-md-start m-0" data-viewport="opacity">
                             <li class="nav-item" role="presentation">
                                 <button class="active" id="flights-tab" data-bs-toggle="tab" data-bs-target="#flights" type="button" role="tab" aria-controls="flights" aria-selected="true">Flights</button>
                             </li>
@@ -594,7 +650,7 @@
                         </div>
                     </div>
                     <div class="discount__button" data-viewport="opacity">
-                        <a class="discount__button--more"><i class="icofont-rounded-down"></i></a>
+                        <a class="discount__button--more" href="tours.html"><i class="icofont-rounded-down"></i></a>
                     </div>
                 </div>
             </div>
@@ -607,7 +663,7 @@
         <div class="container-xl">
             <div class="row">
                 <div class="col-12">
-                    <div class="support__list d-flex">
+                    <div class="support__list d-flex flex-wrap">
                         <div class="support__item">
                             <h3 class="support__headline" data-viewport="opacity">International<br/>Flights</h3>
                             <div class="support__button" data-viewport="opacity">
@@ -784,7 +840,7 @@
     <section class="resort-surprises">
         <div class="container-xl">
             <div class="row align-items-center">
-                <div class="col-5 pe-5">
+                <div class="col-12 col-md-5 pe-2 pe-md-2 pe-lg-5">
                     <div class="resort-surprises__left">
                         <h3 class="resort-surprises__headline" data-viewport="opacity">Resort Surprises</h3>
                         <div class="resort-surprises__intro">
@@ -810,7 +866,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <div class="resort-surprises__right">
                         <div class="resort-surprises__videos resort-surprises__js owl-carousel owl-theme" data-viewport="opacity">
                             <!-- start video item -->
@@ -1458,7 +1514,7 @@
         <div class="container-xl">
             <div class="row py-5">
                 <div class="col-12 col-md-3">
-                    <h2 class="footer__logo m-0 text-center text-md-start">
+                    <h2 class="footer__logo m-0 text-start">
                         <img class="light" src="assets/img/logo.png" alt="logo" />
                     </h2>
                     <div class="footer__intro">Enjoy the touring<br/>with FindTrip</div>
@@ -1470,7 +1526,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-2 offset-1">
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-3 offset-0 offset-lg-1">
                     <div class="footer__items">
                         <h4>Menu</h4>
                         <ul>
@@ -1479,7 +1535,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-2">
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-3">
                     <div class="footer__items">
                         <h4>Booking Plan</h4>
                         <ul>
@@ -1489,7 +1545,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-2">
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-3">
                     <div class="footer__items">
                         <h4>Further Information</h4>
                         <ul>
@@ -1498,7 +1554,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-2">
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-3">
                     <div class="footer__items">
                         <h4>Get App</h4>
                         <ul>
@@ -1507,7 +1563,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
             <div class="row">
                 <div class="col-12">

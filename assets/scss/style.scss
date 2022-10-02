@@ -479,6 +479,7 @@ img {
     form {
         .destinations__form--list {
             margin: 0 -10px;
+            flex-wrap: wrap;
             .destinations__form--item {
                 padding: 0 10px;
                 flex: 1;
@@ -619,9 +620,6 @@ img {
         }
     }
 }
-
-
-
 
 @-webkit-keyframes bg-move {
     0% {

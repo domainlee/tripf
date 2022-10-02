@@ -3,14 +3,17 @@
 }
 @media (max-width: 992px) {
   .container-xl {
-    padding: 0 30px;
-  }
-  html {
-    scroll-padding-top: 70px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .nav-open-js {
     overflow: hidden;
   }
+
+  .heading-default {
+    font-size: 42px;
+  }
+
   .header {
     .header_inner {
       .header__button-menu {
@@ -66,96 +69,334 @@
           transition-delay: 0.5s;
         }
       }
-      .header__nav {
-        position: fixed;
-        top: 70px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        visibility: hidden;
-        .header__navigation {
-          z-index: 3;
-          li {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.8s ease;
-            transform: translate(0, 5px);
-            a {
-              padding: 15px 12px;
-              font-size: 18px;
-            }
-            @for $i from 1 through 8 {
-              &:nth-child(#{$i}) {
-                transition-delay:(#{($i+1)*0.1s});
-              }
-            }
-            .nav-open-js & {
-              opacity: 1;
-              visibility: visible;
-              transform: translate(0, 0px);
-            }
+      .header__nav--mobile {
+          position: fixed;
+          top: 90px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          visibility: hidden;
+          ul {
+              display: none;
           }
-        }
-        .nav-open-js & {
-          visibility: visible;
-        }
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background-color: var(--bg);
-          z-index: 1;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity .5s ease;
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: 2;
-          background-color: var(--bg);
-          visibility: hidden;
-          transition-delay: 1s;
-          -moz-transition-duration: 1s;
-          -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-        }
-        .nav-open-js & {
+          .head__show & {
+              top: 70px;
+          }
+          .header__navigation {
+              z-index: 3;
+              > li {
+                  opacity: 0;
+                  visibility: hidden;
+                  transition: all 0.8s ease;
+                  transform: translate(0, 5px);
+                  position: relative;
+                  border-bottom: 1px dashed #b2b2b2;
+                  list-style: none;
+                  > a {
+                      padding: 10px 0;
+                      font-size: 18px;
+                      color: #000;
+                  }
+                  span.more {
+                    position: absolute;
+                    right: -7px;
+                    top: -8px;
+                    cursor: pointer;
+                    font-size: 30px;
+                    font-weight: 300;
+                    padding: 10px;
+                    &.active {
+                        -webkit-transform: rotate(45deg);
+                        -moz-transform: rotate(45deg);
+                        -o-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                  }
+                  @for $i from 1 through 8 {
+                    &:nth-child(#{$i}) {
+                        transition-delay:(#{($i+1)*0.1s});
+                    }
+                  }
+                  .nav-open-js & {
+                      opacity: 1;
+                      visibility: visible;
+                      transform: translate(0, 0px);
+                  }
+                  > ul {
+                      border-left: 1px dashed;
+                      margin: 0 0 20px;
+                      padding: 0 0 0 10px;
+                      > li {
+                        border: none;
+                        list-style: none;
+                        position: relative;
+                        a {
+                          color: #000;
+                        }
+                        > ul {
+                          border-left: 1px dashed;
+                          margin: 5px 0 5px 17px;
+                          padding: 0 0 0 5px;
+                          > li {
+                            border: none;
+                            list-style: none;
+                            position: relative;
+                            a {
+                              color: #000;
+                            }
+                          }
+                        }
+                      }
+                  }
+              }
+          }
+          .nav-open-js & {
+              visibility: visible;
+          }
           &:before {
-            opacity: 1;
-            visibility: visible;
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background-color: #FFF;
+              z-index: 1;
+              opacity: 0;
+              visibility: hidden;
+              transition: opacity .5s ease;
           }
           &:after {
-            visibility: visible;
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              z-index: 2;
+              background-color: #FFF;
+              visibility: hidden;
+              transition-delay: 1s;
+              -moz-transition-duration: 1s;
+              -webkit-transition-duration: 1s;
+              transition-duration: 1s;
+          }
+          .nav-open-js & {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+            &:after {
+                visibility: visible;
+            }
+        }
+      }
+    }
+    .header__control {
+      margin: 0 auto;
+      z-index: 3;
+      flex-direction: column;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .8s ease;
+      transition-delay: 1s;
+      .header__control--bt1 {
+        margin: 0 0 10px;
+      }
+      .nav-open-js & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .hero {
+    .hero__image {
+      .hero___content {
+        .hero___content--inner {
+          max-width: 400px;
+          height: 100%;
+          h2 {
+          }
+        }
+      }
+    }
+    &.hero--form  {
+      .hero__image {
+        .hero___content {
+          .hero___content--inner {
+            max-width: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+              margin: 15px 0;
+              font-size: 46px;
+            }
+            div {
+              margin: 0 0 30px;
+            }
           }
         }
       }
     }
   }
 
+  .destinations__form {
+    margin: -60px 50px 0;
+  }
 
-}
-@media (max-width: 768px) {
+  .destinations__list {
+    margin: -30px -10px 0;
+    .destinations__item {
+      padding: 0 10px;
+      width: 33.3333%;
+      .discount & {
+        width: 33.3333%;
+      }
+    }
+    .discount & {
+      padding: 0 50px 80px;
+    }
+  }
 
-  .heading-default {
-    margin: 0 0 40px;
-    font-size: 46px;
-    &:after {
-      width: 250px;
-      height: 30px;
+  .support {
+    padding: 50px 0;
+    .support__list {
+      justify-content: flex-end;
+      .support__item {
+        width: 35%;
+        &:first-child {
+          margin: 0 0 30px;
+          width: 30%;
+        }
+        .support__headline--small {
+          margin: 0 0 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .resort-surprises {
+    .resort-surprises__right {
+      padding: 0 30px 30px;
     }
   }
 
 
 }
+@media (max-width: 768px) {
+  .hero {
+    .hero__image {
+      .hero___content {
+        .hero___content--inner {
+          max-width: 400px;
+          height: 100%;
+          h2 {
+          }
+        }
+      }
+    }
+    &.hero--form  {
+      .hero__image {
+        .hero___content {
+          padding: 60px;
+          width: 100%;
+          .hero___content--inner {
+            max-width: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+              font-size: 36px;
+            }
+            div {
+              margin: 0 0 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .destinations__form {
+    margin: -50px 30px 0;
+  }
+
+  .destinations__list {
+    margin: -30px -10px 0;
+    .destinations__item {
+      width: 50%;
+      .discount & {
+        width: 50%;
+      }
+    }
+    .discount & {
+      padding: 0 50px 80px;
+    }
+  }
+
+  .resort-surprises {
+    .resort-surprises__features {
+      display: flex;
+      flex-wrap: wrap;
+      .resort-surprises__feature--item {
+        width: 50%;
+      }
+    }
+  }
+
+}
 
 @media (max-width:576px) {
+  .hero {
+    .hero__image {
+      &:before {
+        padding-top: 65%;
+      }
+      .hero___content {
+        padding: 50px;
+        .hero___content--inner {
+          max-width: 400px;
+          height: 100%;
+          h2 {
+          }
+        }
+      }
+    }
+    &.hero--form  {
+      .hero__image {
+        .hero___content {
+          padding: 50px;
+          .hero___content--inner {
+            h2 {
+              font-size: 32px;
+            }
+            div {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .destinations__form {
+    margin: -40px 30px 0;
+    padding: 40px 40px 80px;
+    .destinations__form--nav {
+      .nav-item {
+        margin: 0 5px 5px;
+      }
+    }
+    .hero__form--button {
+      position: absolute;
+    }
+  }
+
 
 }
