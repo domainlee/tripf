@@ -370,10 +370,15 @@
     &.hero--form  {
       .hero__image {
         .hero___content {
-          padding: 50px;
+          padding: 28px;
           .hero___content--inner {
+            strong {
+              font-size: 15px;
+              font-weight: 500;
+            }
             h2 {
-              font-size: 32px;
+              font-size: 28px;
+              margin: 10px 0 20px;
             }
             div {
               display: none;
@@ -387,7 +392,7 @@
 
   .destinations__form {
     margin: -35px 20px 0;
-    padding: 40px 40px 80px;
+    padding: 30px 30px 100px;
     .destinations__form--nav {
       .nav-item {
         margin: 0 5px 5px;
@@ -395,6 +400,21 @@
     }
     .hero__form--button {
       position: absolute;
+      background-color: #000;
+      color: #FFF;
+      left: 30px;
+      right: 30px;
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px 0;
+      bottom: 30px;
+    }
+    form {
+      .destinations__form--list {
+        .destinations__form--item {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -411,5 +431,72 @@
     }
   }
 
+  .support {
+    padding: 50px 0;
+    .support__list {
+      justify-content: flex-end;
+      .support__item {
+        margin: 0 0 20px;
+        width: 100%;
+        text-align: center;
+        .support__headline {
+          &:before {
+            margin: 0 auto;
+          }
+        }
+        &:first-child {
+          margin: 0 0 30px;
+          width: 100%;
+        }
+        i {
+          margin: 0 auto 15px;
+        }
+        .support__headline--small {
+          margin: 0 0 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .resort-surprises {
+    .resort-surprises__features {
+      display: flex;
+      flex-wrap: wrap;
+      .resort-surprises__feature--item {
+        width: 50%;
+      }
+    }
+    .resort-surprises__right {
+      padding: 0 10px 30px;
+      &:after {
+        top: 50px;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .popular-search {
+    .popular-search__list {
+      padding: 50px 5px;
+      .popular-search__item {
+        a {
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+  .blog {
+    .blog__inner {
+      flex-wrap: wrap;
+      .blog__left {
+        margin: 0 0 30px;
+      }
+      .blog__left, .blog__right {
+        width: 100%;
+      }
+    }
+  }
 
 }
