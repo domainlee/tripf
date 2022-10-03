@@ -616,6 +616,7 @@ img {
             input.form-extra__passenger--number {
                 width: 100px;
                 text-align: center;
+                flex: 1;
             }
         }
     }
@@ -1328,6 +1329,7 @@ img {
                 font-weight: 400;
                 font-size: 14px;
                 transition: all 0.3s ease;
+                flex: 0 0 auto;
                 &:hover {
                     transform: translate(0, -2px);
                     box-shadow: 0 4px 10px 4px rgb(0 0 0 / 5%);
