@@ -358,7 +358,7 @@
         padding-top: 65%;
       }
       .hero___content {
-        padding: 50px;
+        padding: 30px;
         .hero___content--inner {
           max-width: 400px;
           height: 100%;
@@ -386,7 +386,7 @@
   }
 
   .destinations__form {
-    margin: -40px 30px 0;
+    margin: -35px 20px 0;
     padding: 40px 40px 80px;
     .destinations__form--nav {
       .nav-item {
@@ -395,6 +395,19 @@
     }
     .hero__form--button {
       position: absolute;
+    }
+  }
+
+  .destinations__list {
+    margin: -30px -10px 0;
+    .destinations__item {
+      width: 100%;
+      .discount & {
+        width: 100%;
+      }
+    }
+    .discount & {
+      padding: 0 20px 70px;
     }
   }
 
