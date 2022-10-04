@@ -1285,11 +1285,27 @@ img {
         margin: 15px 0 10px;
         font-weight: 700;
         font-size: 36px;
+        a {
+            transition: all 0.3s ease;
+        }
+        &:hover {
+            a {
+                color: #ff8604;
+            }
+        }
     }
     .blog-grid__title {
         margin: 15px 0 10px;
         font-weight: 700;
         font-size: 26px;
+        a {
+            transition: all 0.3s ease;
+        }
+        &:hover {
+            a {
+                color: #ff8604;
+            }
+        }
     }
     .blog-list__link {
         a {
@@ -1484,7 +1500,7 @@ img {
         }
         .accrodion-title {
             h5 {
-                padding: 10px;
+                padding: 10px 25px 10px 10px;
                 margin: 0;
                 cursor: pointer;
                 position: relative;
@@ -1696,12 +1712,14 @@ img {
     .filter-button-group {
         margin: 0 0 20px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         button {
             padding: 8px 20px;
             border: none;
             background-color: rgba(0,0,0,0);
             border-radius: 5px;
+            flex: 0 0 auto;
             transition: background-color .3s ease;
             &.active {
                 color: $color-white;
