@@ -259,7 +259,7 @@
             nav: true,
             lazyLoad: true,
             autoplay: true,
-            items: 4,
+            items: 1,
             navText : ["<i class='icofont-rounded-left'></i>","<i class='icofont-rounded-right'></i>"],
             responsive: {
                 0: {
@@ -267,8 +267,15 @@
                 },
                 480: {
                     nav: false,
+                    items: 2,
                 },
                 768: {
+                    nav: true,
+                    items: 3,
+                },
+                992: {
+                    items: 4,
+                    margin: 30,
                     nav: true,
                 }
             }

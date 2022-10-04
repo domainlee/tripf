@@ -6,6 +6,7 @@
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .nav-open-js {
     overflow: hidden;
   }
@@ -286,16 +287,27 @@
     }
   }
 
-
 }
 @media (max-width: 768px) {
+
+  .heading-banner {
+    margin: 0;
+    .hero__image {
+      &:before {
+        padding-top: 55%;
+      }
+    }
+  }
+
   .hero {
     .hero__image {
       .hero___content {
+        padding: 55px;
         .hero___content--inner {
           max-width: 400px;
           height: 100%;
           h2 {
+            font-size: 36px;
           }
         }
       }
@@ -303,7 +315,7 @@
     &.hero--form  {
       .hero__image {
         .hero___content {
-          padding: 60px;
+          padding: 55px;
           width: 100%;
           .hero___content--inner {
             max-width: inherit;
@@ -355,16 +367,48 @@
     }
   }
 
-}
-@media (min-width:576px) {
-  .w-sm-25 {
-    width: 25% !important;
+  .page-404 {
+    .page-404__content {
+      .page-404__heading {
+        font-size: 160px;
+      }
+    }
   }
+
+  .resort-surprises {
+    .resort-surprises__phone {
+      margin: 30px auto;
+      justify-content: center;
+    }
+  }
+
 }
+
 @media (max-width:576px) {
   .heading-default {
     font-size: 32px;
     margin: 0 0 30px;
+  }
+
+  .heading-banner {
+    margin: 0;
+    .hero__image {
+      &:before {
+        padding-top: 70%;
+      }
+      .hero___content {
+        width: 100%;
+        .hero___content--inner {
+          h2 {
+            margin: 15px 0 0;
+            font-size: 46px;
+          }
+          > div {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   .hero {
@@ -528,4 +572,23 @@
     }
   }
 
+  .page-404 {
+    .page-404__content {
+      .page-404__heading {
+        font-size: 120px;
+      }
+      span {
+        font-size: 22px;
+        margin: 0 0 15px;
+        display: block;
+      }
+    }
+  }
+
+}
+
+@media (min-width:576px) {
+  .w-sm-25 {
+    width: 25% !important;
+  }
 }
