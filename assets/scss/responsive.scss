@@ -411,7 +411,7 @@
         .hero___content--inner {
           h2 {
             margin: 15px 0 0;
-            font-size: 42px;
+            font-size: 36px;
           }
           > div {
             display: none;
@@ -432,7 +432,16 @@
         .hero___content--inner {
           max-width: 400px;
           height: 100%;
+          strong {
+            font-size: 15px;
+            font-weight: 500;
+          }
           h2 {
+            font-size: 28px;
+            margin: 10px 0 0;
+          }
+          div {
+            display: none;
           }
         }
       }
@@ -499,8 +508,10 @@
   .destinations__list {
     margin: -30px -10px 0;
     &:before {
-      top: 60px;
-      border-radius: 15px;
+      .discount & {
+        top: 100px;
+        border-radius: 15px;
+      }
     }
     .destinations__item {
       width: 100%;
@@ -645,7 +656,36 @@
   .login {
     .login__right {
       margin: 0;
-      padding: 50px;
+      padding: 30px;
+      label {
+        margin: 0 0 10px;
+        font-size: 28px;
+      }
+    }
+  }
+
+  .testimonials {
+    .testimonials__inner {
+      padding: 0 15px;
+      &:before {
+        top: 100px;
+        border-radius: 15px;
+      }
+      .testimonials__list {
+        .testimonials__item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .tour-detail {
+    .tour-detail__left {
+      .tour-detail__left--item {
+        .accrodion {
+          margin: 0 0 15px;
+        }
+      }
     }
   }
 

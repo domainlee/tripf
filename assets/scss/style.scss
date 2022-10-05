@@ -1,8 +1,8 @@
 /*
-Theme Name: Ervin Jason
+Theme Name: Tripf
 Author: domainlee
 Support: domainlee.niit@gmail.com
-Description: Template personal for blog , my cv, resume ...
+Description: Template HTML travel agency, booking, tour ...
 Version: 1.0.0
 */
 
@@ -11,44 +11,41 @@ Version: 1.0.0
 1. Theme default css
 2. Loading
 3. Header
-4. About me
-5. My Resume
-6. My Service
-7. My Project
-8. My Client
-8. My Blog
-10. Contact
-11. Footer
-12. Single Page
-13. Typography
-14. Custom Style
+4. Hero
+5. Destinations Form
+6. Support
+7. Discount
+8. Destinations List
+9. Top Destinations
+10. Resort Surprises
+11. Explore Destinations
+12. Popular Search
+13. Blog
+14. Better Work
+15. Guides
+16. FAQ
+17. Tour Gallery
+18. Tour Detail
+19. Gallery
+20. Testimonials
+21. 404
+22. Login
+23. Footer
+24. Single Page
+25. Sidebar
+26. Page Contact
+27. Typography
+28. Custom Style
 -------------------------------------
 */
 
 /* 1. Start Theme Default CSS */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700&display=swap');
 
-html {
-    .light {
-        display: inline-block;
-    }
-    .dark {
-        display: none;
-    }
-}
-
-html[data-theme='dark'] {
-    .light {
-        display: none;
-    }
-    .dark {
-        display: inline-block;
-    }
-}
-
 $color-white: #FFFFFF;
 $color-black: #000000;
 $color-grey: #666666;
+$color-main: #ff8604;
 
 body {
     font-weight: 400;
@@ -57,14 +54,14 @@ body {
 }
 ::selection {
     background: #ffb271;
-    color: #FFF;
+    color: $color-white;
 }
 a {
-    color: var(--text);
+    color: $color-black;
     text-decoration: none;
 }
 a:hover {
-    color: var(--text);
+    color: $color-black;
 }
 img {
     max-width: 100%;
@@ -120,6 +117,7 @@ img {
     &.is-on {
     }
 }
+
 .heading-default__small {
     margin: 0 0 30px;
     font-size: 20px;
@@ -141,6 +139,42 @@ img {
 
 }
 
+@-webkit-keyframes bg-move {
+    0% {
+        background-position: left;
+    }
+    30% {
+        background-position: right;
+    }
+    60% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+@keyframes bg-move {
+    0% {
+        background-position: left;
+    }
+    30% {
+        background-position: right;
+    }
+    60% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.bg-orange-gradient {
+    background: rgb(254,213,0); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(254,213,0,1) 0%, rgba(254,95,1,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(254,213,0,1) 0%,rgba(254,95,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(254,213,0,1) 0%,rgba(254,95,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed500', endColorstr='#fe5f01',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
 /* End Theme Default CSS */
 
@@ -177,7 +211,7 @@ img {
     }
     .head__show & {
         top: 0;
-        background-color: #FFF;
+        background-color: $color-white;
     }
     .header_inner {
         height: 90px;
@@ -218,7 +252,7 @@ img {
                         color: var(--text);
                         transition: all 0.3s ease;
                         &:hover {
-                            color: #ff8604;
+                            color: $color-main;
                         }
                     }
                     > ul {
@@ -270,7 +304,7 @@ img {
                                 border-bottom: 1px dashed #DDD;
                                 display: flex;
                                 &:hover {
-                                    color: #ff8604;
+                                    color: $color-main;
                                 }
                             }
                             > ul {
@@ -301,7 +335,7 @@ img {
                                         transition: all 0.3s ease;
                                         border-bottom: 1px dashed #DDD;
                                         &:hover {
-                                            color: #ff8604;
+                                            color: $color-main;
                                         }
                                     }
                                 }
@@ -326,7 +360,7 @@ img {
             font-weight: 400;
             transition: all 0.3s ease;
             &:hover {
-                color: #ff8604;
+                color: $color-main;
             }
         }
         .header__control--bt2 {
@@ -338,9 +372,9 @@ img {
             font-weight: 400;
             transition: all 0.3s ease;
             &:hover {
-                color: #FFF;
-                background-color: #ff8604;
-                border-color: #ff8604;
+                color: $color-white;
+                background-color: $color-main;
+                border-color: $color-main;
             }
         }
     }
@@ -352,8 +386,7 @@ img {
 }
 /** 3. End Header **/
 
-
-
+/** 4. Start Hero **/
 .hero {
     margin: 0 0 50px;
     .hero__image {
@@ -364,7 +397,7 @@ img {
         animation: bg-move 50s infinite;
         .hero___content {
             padding: 80px;
-            color: #FFF;
+            color: $color-white;
             border-radius: 8px 0 0 8px;
             width: 70%;
             background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
@@ -399,54 +432,9 @@ img {
         }
     }
 }
+/** 4. End Hero **/
 
-
-.heading-banner {
-    margin: 0 0 50px;
-    position: relative;
-    background-position: center;
-    background-size: 110% auto;
-    -webkit-animation: bg-move 50s infinite;
-    animation: bg-move 50s infinite;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 30%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 30%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
-    }
-    .hero__image {
-        &:before {
-            display: block;
-            content: "";
-            padding-top: 35%;
-        }
-        .hero___content {
-            color: #FFF;
-            border-radius: 8px 0 0 8px;
-            width: 70%;
-            .hero___content--inner {
-                max-width: 850px;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                h2 {
-                    margin: 15px 0 30px;
-                    font-size: 54px;
-                    font-weight: 700;
-                }
-            }
-
-        }
-    }
-}
-
+/** 5. Start Destinations Form **/
 .destinations__form {
     margin: -100px 80px 0;
     padding: 50px;
@@ -467,7 +455,7 @@ img {
                 transition: background-color 0.3s ease;
                 color: $color-black;
                 &.active {
-                    color: #FFF;
+                    color: $color-white;
                     @extend .bg-orange-gradient;
                 }
                 &:hover {
@@ -503,7 +491,7 @@ img {
                 border-radius: 5px;
                 flex: 0 0 auto;
                 height: 45px;
-                background-color: #FFF;
+                background-color: $color-white;
             }
             p.exa {
                 font-size: 12px;
@@ -524,7 +512,7 @@ img {
     top: 100px;
     width: 500px;
     right: 10px;
-    background-color: #FFF;
+    background-color: $color-white;
     border: 1px solid #000;
     border-radius: 5px;
     z-index: 3;
@@ -615,7 +603,7 @@ img {
                 margin: 0 5px;
                 border-radius: 50%;
                 background-color: #000;
-                color: #FFF;
+                color: $color-white;
                 cursor: pointer;
             }
             input.form-extra__passenger--number {
@@ -626,76 +614,55 @@ img {
         }
     }
 }
+/** 5. End Destinations Form **/
 
-@-webkit-keyframes bg-move {
-    0% {
-        background-position: left;
+.heading-banner {
+    margin: 0 0 50px;
+    position: relative;
+    background-position: center;
+    background-size: 110% auto;
+    -webkit-animation: bg-move 50s infinite;
+    animation: bg-move 50s infinite;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 30%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 30%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
-    30% {
-        background-position: right;
-    }
-    60% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
-}
-@keyframes bg-move {
-    0% {
-        background-position: left;
-    }
-    30% {
-        background-position: right;
-    }
-    60% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
-}
+    .hero__image {
+        &:before {
+            display: block;
+            content: "";
+            padding-top: 35%;
+        }
+        .hero___content {
+            color: $color-white;
+            border-radius: 8px 0 0 8px;
+            width: 70%;
+            .hero___content--inner {
+                max-width: 850px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2 {
+                    margin: 15px 0 30px;
+                    font-size: 54px;
+                    font-weight: 700;
+                }
+            }
 
-.bg-orange-gradient {
-    background: rgb(254,213,0); /* Old browsers */
-    background: -moz-linear-gradient(45deg,  rgba(254,213,0,1) 0%, rgba(254,95,1,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg,  rgba(254,213,0,1) 0%,rgba(254,95,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg,  rgba(254,213,0,1) 0%,rgba(254,95,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed500', endColorstr='#fe5f01',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-.bg-green-gradient {
-    background: rgb(177,255,172); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(177,255,172,1) 0%, rgba(126,204,119,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(177,255,172,1) 0%,rgba(126,204,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(177,255,172,1) 0%,rgba(126,204,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ffac', endColorstr='#7ecc77',GradientType=0 ); /* IE6-9 */
-}
-.bg-blue-gradient {
-    background: rgb(187,229,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(187,229,255,1) 0%, rgba(117,181,224,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(187,229,255,1) 0%,rgba(117,181,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(187,229,255,1) 0%,rgba(117,181,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbe5ff', endColorstr='#75b5e0',GradientType=0 ); /* IE6-9 */
-}
-.bg-red-gradient {
-    background: rgb(255,215,215); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,215,215,1) 0%, rgba(239,144,144,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,215,215,1) 0%,rgba(239,144,144,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,215,215,1) 0%,rgba(239,144,144,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd7d7', endColorstr='#ef9090',GradientType=0 ); /* IE6-9 */
-}
-.bg-brow-gradient {
-    background: rgb(255,244,220); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,244,220,1) 0%, rgba(234,199,133,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,244,220,1) 0%,rgba(234,199,133,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,244,220,1) 0%,rgba(234,199,133,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff4dc', endColorstr='#eac785',GradientType=0 ); /* IE6-9 */
+        }
+    }
 }
 
-
-
-
-/** 9. Start Support **/
+/** 6. Start Support **/
 .support {
     padding: 50px 0;
     .support__headline {
@@ -775,10 +742,9 @@ img {
         }
     }
 }
-/** 9. Start Support **/
+/** 6. End Support **/
 
-
-/** 9. Start Support **/
+/** 7. Start Discount **/
 .discount {
     padding: 50px 0;
     position: relative;
@@ -792,14 +758,16 @@ img {
             align-items: center;
             justify-content: center;
             background-color: #000;
-            color: #fff;
+            color: $color-white;
             border-radius: 50%;
             font-size: 28px;
             cursor: pointer;
         }
     }
 }
+/** 7. End Discount **/
 
+/** 8. Start Destinations List **/
 .destinations__list {
     margin: -30px -15px 0;
     display: flex;
@@ -827,7 +795,7 @@ img {
             width: 33.33333%;
         }
         .destinations__item--inner {
-            background-color: #FFF;
+            background-color: $color-white;
             border-radius: 10px;
             overflow: hidden;
             transition: all 0.5s ease;
@@ -867,7 +835,7 @@ img {
                     font-size: 14px;
                     font-weight: 600;
                     padding: 25px;
-                    color: #FFF;
+                    color: $color-white;
                     z-index: 1;
                     .discount & {
                         padding: 30px;
@@ -888,7 +856,7 @@ img {
                 .destinations__price {
                     margin: 0 0 10px;
                     font-weight: 700;
-                    color: #ff8604;
+                    color: $color-main;
                 }
                 .destinations__booking-id {
                     margin: 0 0 5px;
@@ -909,12 +877,12 @@ img {
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #ff8604;
+                    background-color: $color-main;
                     border-radius: 50%;
                     position: absolute;
                     right: 15px;
                     top: -25px;
-                    color: #FFF;
+                    color: $color-white;
                     font-weight: 500;
                     font-size: 13px;
                     .discount & {
@@ -928,10 +896,9 @@ img {
         }
     }
 }
+/** 8. End Destinations List **/
 
-
-/** 9. Start Support **/
-
+/** 9. Start Top Destinations **/
 .top-destinations {
     padding: 50px 0;
     .top-destinations__list {
@@ -969,7 +936,7 @@ img {
                     bottom: 0;
                     display: flex;
                     flex-direction: column;
-                    color: #FFF;
+                    color: $color-white;
                     padding: 30px;
                     justify-content: flex-end;
                     z-index: 1;
@@ -1007,7 +974,9 @@ img {
         }
     }
 }
+/** 9. End Top Destinations **/
 
+/** 10. Start Resort Surprises **/
 .resort-surprises {
     padding: 50px 0;
     .resort-surprises__headline {
@@ -1030,7 +999,7 @@ img {
                 height: 40px;
                 border-radius: 50%;
                 flex: 0 0 auto;
-                background-color: #ff8604;
+                background-color: $color-main;
                 background-size: auto 20px;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -1058,7 +1027,7 @@ img {
                     background-repeat: no-repeat;
                     background-size: cover;
                     border-radius: 10px;
-                    border: 3px solid #FFF;
+                    border: 3px solid $color-white;
                     box-shadow: 0 3px 10px 5px #00000030;
                     &:after {
                         content: '';
@@ -1081,7 +1050,7 @@ img {
                         display: inline-flex;
                         align-items: center;
                         justify-content: center;
-                        color: #FFF;
+                        color: $color-white;
                         font-size: 38px;
                         z-index: 1;
                     }
@@ -1128,7 +1097,9 @@ img {
         }
     }
 }
+/** 10. End Resort Surprises **/
 
+/** 11. Start Explore Destinations **/
 .explore-destinations {
     padding: 50px 0;
     .explore-destinations__nav {
@@ -1152,7 +1123,9 @@ img {
         }
     }
 }
+/** 11. End Explore Destinations **/
 
+/** 12. Start Popular Search **/
 .popular-search {
     padding: 50px 0;
     .heading-default {
@@ -1180,14 +1153,16 @@ img {
                 transition: all 0.3s ease;
                 &:hover {
                     color: $color-white;
-                    background-color: #ff8604;
-                    border-color: #ff8604;
+                    background-color: $color-main;
+                    border-color: $color-main;
                 }
             }
         }
     }
 }
-/** 9. Start My Blog **/
+/** 12. End Popular Search **/
+
+/** 13. Start Blog **/
 .blog {
     padding: 50px 0;
     position: relative;
@@ -1202,7 +1177,7 @@ img {
                 &:hover {
                     transform: translate(0, -5px);
                     .blog__left--title {
-                        color: #ff8604;
+                        color: $color-main;
                     }
                 }
                 figure {
@@ -1230,7 +1205,7 @@ img {
                 &:hover {
                     transform: translate(5px, 0);
                     h3 {
-                        color: #ff8604;
+                        color: $color-main;
                     }
                 }
                 figure {
@@ -1259,7 +1234,7 @@ img {
                 &:hover {
                     transform: translate(0, -5px);
                     h3 {
-                        color: #ff8604;
+                        color: $color-main;
                     }
                 }
                 figure {
@@ -1290,7 +1265,7 @@ img {
         }
         &:hover {
             a {
-                color: #ff8604;
+                color: $color-main;
             }
         }
     }
@@ -1303,19 +1278,19 @@ img {
         }
         &:hover {
             a {
-                color: #ff8604;
+                color: $color-main;
             }
         }
     }
     .blog-list__link {
         a {
-            color: #ff8604;
+            color: $color-main;
         }
     }
 }
-/** 9. End My Blog **/
+/** 13. End Blog **/
 
-/** 10. Start Contact **/
+/** 14. Start Better Work **/
 .better-work {
     padding: 50px 0;
     .heading-default {
@@ -1360,8 +1335,9 @@ img {
         }
     }
 }
-/** 10. End Contact **/
+/** 14. End Better Work **/
 
+/** 15. Start Guides **/
 .guides {
     padding: 50px 0;
     .guides__list {
@@ -1396,7 +1372,7 @@ img {
                     bottom: 0;
                     display: flex;
                     flex-direction: column;
-                    color: #FFF;
+                    color: $color-white;
                     justify-content: flex-end;
                     z-index: 1;
                     transition: all 1s ease;
@@ -1474,7 +1450,9 @@ img {
         }
     }
 }
+/** 15. End Guides **/
 
+/** 16. Start FAQ **/
 .faq {
     padding: 50px 0;
     .accrodion {
@@ -1483,9 +1461,9 @@ img {
         border: 1px solid #c9c9c9;
         border-radius: 10px;
         &.active {
-            background-color: #ff8604;
-            border-color: #ff8604;
-            color: #FFF;
+            background-color: $color-main;
+            border-color: $color-main;
+            color: $color-white;
             .accrodion-title {
                 h5 {
                     &:after {
@@ -1531,7 +1509,9 @@ img {
         }
     }
 }
+/** 16. End FAQ **/
 
+/** 17. Start Tour Gallery **/
 .tour-gallery {
     .tour-gallery__js {
         background-color: $color-black;
@@ -1567,7 +1547,9 @@ img {
         }
     }
 }
+/** 17. End Tour Gallery **/
 
+/** 18. Start Tour Detail **/
 .tour-detail {
     .tour-detail__left {
         .tour-detail__review  {
@@ -1668,7 +1650,7 @@ img {
             padding: 2px 5px;
             display: inline-block;
             border-radius: 5px;
-            background-color: #ff8604;
+            background-color: $color-main;
             color: $color-white;
             font-size: 13px;
         }
@@ -1689,7 +1671,7 @@ img {
                 padding: 12px 15px;
                 border-radius: 5px;
                 border: none;
-                color: #FFF;
+                color: $color-white;
                 font-weight: 600;
                 @extend .bg-orange-gradient;
                 transition: all .3s ease;
@@ -1707,7 +1689,9 @@ img {
         }
     }
 }
+/** 18. End Tour Detail **/
 
+/** 19. Start Gallery **/
 .gallery {
     .filter-button-group {
         margin: 0 0 20px;
@@ -1740,7 +1724,9 @@ img {
         }
     }
 }
+/** 19. End Gallery **/
 
+/** 20. Start Testimonials **/
 .testimonials {
     .testimonials__inner {
         padding: 0 80px 50px;
@@ -1789,7 +1775,9 @@ img {
         }
     }
 }
+/** 20. End Testimonials **/
 
+/** 21. Start 404 **/
 .page-404 {
     .page-404__content {
         .page-404__heading {
@@ -1822,7 +1810,9 @@ img {
         }
     }
 }
+/** 21. End 404 **/
 
+/** 22. Start Login **/
 .login {
     .better-experience {
         margin: 0 -15px;
@@ -1857,7 +1847,7 @@ img {
         padding: 50px;
         border: 1px solid #DDD;
         border-radius: 15px;
-        background-color: #FFF;
+        background-color: $color-white;
         z-index: 5;
         position: relative;
         > label {
@@ -1887,7 +1877,7 @@ img {
         }
         .button-login-facebook {
             background-color: #4267B2;
-            color: #FFF;
+            color: $color-white;
             padding: 10px 20px;
             text-align: center;
             border-radius: 10px;
@@ -1895,7 +1885,7 @@ img {
         }
         .button-login-google {
             background-color: #DB4437;
-            color: #FFF;
+            color: $color-white;
             padding: 10px 20px;
             text-align: center;
             border-radius: 10px;
@@ -1903,8 +1893,9 @@ img {
         }
     }
 }
+/** 22. End Login **/
 
-/** 11 Start Footer **/
+/** 23. Start Footer **/
 .footer {
     padding: 50px 0;
     .footer__logo {
@@ -1939,7 +1930,7 @@ img {
                     transition: all 0.3s ease;
                     &:hover {
                         transform: translate(2px, 0px);
-                        color: #ff8604;
+                        color: $color-main;
                     }
                 }
 
@@ -1969,9 +1960,9 @@ img {
     }
 
 }
-/** 11. End Footer **/
+/** 23. End Footer **/
 
-/** 12. Start Single Page **/
+/** 24. Start Single Page **/
 .single-post {
     .single-post__title {
         margin: 0 0 10px;
@@ -2278,7 +2269,7 @@ img {
                 -webkit-appearance: none;
                 &:focus {
                     outline: none;
-                    border-color: #ff8604;
+                    border-color: $color-main;
                 }
 
             }
@@ -2292,13 +2283,13 @@ img {
                 -webkit-appearance: none;
                 &:focus {
                     outline: none;
-                    border-color: #ff8604;
+                    border-color: $color-main;
                 }
             }
         }
         input[type=submit] {
             background-color: #000;
-            color: #fff;
+            color: $color-white;
             border: none;
             padding: 10px 25px;
             font-size: 18px;
@@ -2308,9 +2299,9 @@ img {
     }
 
 }
-/** 12. End Single Page **/
+/** 24. End Single Page **/
 
-/** Start Sidebar **/
+/** 25. Start Sidebar **/
 .widget-item {
     .widget-title {
         border-bottom: 1px solid;
@@ -2377,10 +2368,9 @@ img {
         }
     }
 }
-/** End Sidebar **/
+/** 25. End Sidebar **/
 
-
-/**** 11. Page Contact ***/
+/** 26. Start Page Contact ***/
 .page-contact {
     text-align: right;
 }
@@ -2396,7 +2386,6 @@ img {
 .page-contact__intro {
     margin: 20px 0 0;
 }
-
 .page-contact__social {
     margin: 30px 0 0;
 }
@@ -2426,7 +2415,7 @@ img {
 .page-contact__social ul li a:hover {
     background-color: #111;
     border-color: #111;
-    color: #FFF;
+    color: $color-white;
     text-decoration: none;
 }
 .contact-form__row {
@@ -2470,14 +2459,13 @@ img {
         padding: 10px 30px;
         border-radius: 10px;
         background-color: #000;
-        color: #FFF;
+        color: $color-white;
         border: none;
     }
 }
+/**** 26. End Page Contact ***/
 
-/**** 12  ***/
-
-/** 13. Start Typography **/
+/** 27. Start Typography **/
 .editor-content {
     margin: 0 0 15px;
     img {
@@ -2555,9 +2543,9 @@ img {
         font-family: "Noto Serif Display",serif;
     }
 }
-/*** 13. End Typography **/
+/*** 27. End Typography **/
 
-/** 14. Start Custom Style **/
+/** 28. Start Custom Style **/
 .breadcrumb {
     margin: 0;
     padding: 0;
@@ -2593,9 +2581,9 @@ img {
             }
             &.active, &:hover {
                 a {
-                    background-color: #ff8604;
-                    color: #FFF;
-                    border-color: #ff8604;
+                    background-color: $color-main;
+                    color: $color-white;
+                    border-color: $color-main;
                 }
             }
         }
@@ -2728,5 +2716,5 @@ img {
         }
     }
 }
-/*** 14. End Custom Style **/
+/*** 28. End Custom Style **/
 
