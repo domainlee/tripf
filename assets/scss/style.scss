@@ -59,9 +59,10 @@ body {
 a {
     color: $color-black;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 a:hover {
-    color: $color-black;
+    color: $color-main;
 }
 img {
     max-width: 100%;
@@ -1112,6 +1113,7 @@ img {
             background-color: transparent;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            color: $color-black;
             &.active {
                 color: $color-white;
                 @extend .bg-orange-gradient;
@@ -2098,7 +2100,7 @@ img {
             color: $color-black;
             padding: 0;
             font-size: 22px;
-            font-weight: 600;
+            font-weight: 700;
         }
         .related-post__list {
             margin: 0 -10px;
@@ -2540,7 +2542,6 @@ img {
         font-size: 5em;
         font-weight: 500;
         line-height: 1;
-        font-family: "Noto Serif Display",serif;
     }
 }
 /*** 27. End Typography **/
@@ -2551,10 +2552,14 @@ img {
     padding: 0;
     list-style: none;
     li {
+        color: $color-white;
         &:not(:last-child):after {
             margin: 0 10px;
             content: "\f105";
             font: normal normal normal 14px/1 FontAwesome;
+        }
+        a {
+            color: $color-white;
         }
     }
 }
