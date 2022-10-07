@@ -132,7 +132,7 @@
               <li>Neat Simple and Clean Design</li>
               <li>SCSS</li>
               <li>Webpack 5</li>
-              <li>Bundle one file include in theme</li>
+              <li>Bundle one file include in theme (320 kB)</li>
               <li>Fully Responsive Layout</li>
               <li>Cross-Browser Compatible</li>
               <li>Free Icons, Images and Google Fonts</li>
@@ -153,19 +153,18 @@
             <pre>
                 <code class="html">
 &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot; data-theme=&quot;dark&quot;&gt;
+&lt;html lang=&quot;en&quot; data-theme=&quot;light&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;utf-8&quot;&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt;
-    &lt;title&gt;Jason - Personal resume, portfolio, blog HTML Template&lt;/title&gt;
+    &lt;title&gt;Find Trip - Travel tour booking adventure agency&lt;/title&gt;
 
     &lt;link href=&quot;/&quot; rel=&quot;canonical&quot;&gt;
     &lt;link href=&quot;assets/img/favicon.png&quot; rel=&quot;shortcut icon&quot; type=&quot;image/vnd.microsoft.icon&quot;&gt;
 
-    &lt;!--- start style ---&gt;
+    &lt;!-- start style --&gt;
     &lt;link href=&quot;assets/build/css/main.min.css&quot; media=&quot;screen&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
-    &lt;!--- end style ---&gt;
-
+    &lt;!-- end style --&gt;
 &lt;/head&gt;
 &lt;body class=&quot;home&quot;&gt;
 
@@ -174,53 +173,55 @@
     &lt;!-- end loading--&gt;
 
     &lt;!-- start header--&gt;
-    &lt;section class=&quot;header w-25 d-flex align-content-center flex-column lazy&quot;&gt;&lt;/section&gt;
+    &lt;section class=&quot;header d-flex align-content-center flex-row&quot;&gt;&lt;/section&gt;
+    &lt;div class=&quot;header--fixed&quot;&gt;&lt;/div&gt;
     &lt;!-- end header--&gt;
 
-    &lt;!-- start about me --&gt;
-    &lt;section id=&quot;about-me&quot; class=&quot;about-me mb-0 p-50 w-75 offset-0 offset-lg-3 bg-grey&quot; &gt;&lt;/section&gt;
-    &lt;!-- end about me --&gt;
+    &lt;!-- start hero--&gt;
+    &lt;section class=&quot;hero hero--form&quot; data-viewport=&quot;opacity&quot;&gt;&lt;/section&gt;
+    &lt;!-- end hero--&gt;
 
-    &lt;!-- start my resume --&gt;
-    &lt;section id=&quot;my-resume&quot; class=&quot;my-resume px-50  w-75 offset-0 offset-lg-3&quot;&gt;&lt;/section&gt;
-    &lt;!-- end my resume --&gt;
+    &lt;!-- start discount --&gt;
+    &lt;section class=&quot;discount&quot;&gt;&lt;/section&gt;
+    &lt;!-- start discount --&gt;
 
-    &lt;!-- start my service --&gt;
-    &lt;section id=&quot;my-service&quot; class=&quot;my-service  px-50 w-75 offset-0 offset-lg-3 bg-grey&quot;&gt;&lt;/section&gt;
-    &lt;!-- end my service --&gt;
+    &lt;!-- start support--&gt;
+    &lt;section class=&quot;support&quot;&gt;&lt;/section&gt;
+    &lt;!-- end support--&gt;
 
-    &lt;!-- start my project --&gt;
-    &lt;section id=&quot;my-project&quot; class=&quot;my-project  px-50 w-75 offset-0 offset-lg-3 &quot;&gt;&lt;/section&gt;
-    &lt;!-- end my project --&gt;
+    &lt;!-- top destinations --&gt;
+    &lt;section class=&quot;top-destinations&quot;&gt;&lt;/section&gt;
+    &lt;!-- end top destinations --&gt;
 
-    &lt;!-- start my client --&gt;
-    &lt;section id=&quot;my-client&quot; class=&quot;my-client px-50  w-75 offset-0 offset-lg-3 bg-grey&quot;&gt;&lt;/section&gt;
-    &lt;!-- start my client --&gt;
+    &lt;!-- start resort surprises --&gt;
+    &lt;section class=&quot;resort-surprises&quot;&gt;&lt;/section&gt;
+    &lt;!-- end resort surprises --&gt;
+
+    &lt;!-- start explore destinations --&gt;
+    &lt;section class=&quot;explore-destinations&quot;&gt;&lt;/section&gt;
+    &lt;!-- end explore destinations --&gt;
+
+    &lt;!-- start popular search --&gt;
+    &lt;section class=&quot;popular-search&quot;&gt;&lt;/section&gt;
+    &lt;!-- end popular search --&gt;
 
     &lt;!-- start my blog --&gt;
-    &lt;section id=&quot;my-blog&quot; class=&quot;my-blog px-50 w-75 offset-0 offset-lg-3 &quot;&gt;&lt;/section&gt;
+    &lt;section class=&quot;blog&quot;&gt;&lt;/section&gt;
     &lt;!-- end my blog --&gt;
 
-    &lt;!-- start contact --&gt;
-    &lt;section id=&quot;contact&quot; class=&quot;contact px-50 w-75 offset-0 offset-lg-3 bg-grey&quot;&gt;&lt;/section&gt;
-    &lt;!-- end contact --&gt;
+    &lt;!-- start better work --&gt;
+    &lt;section class=&quot;better-work&quot; data-viewport=&quot;opacity&quot;&gt;&lt;/section&gt;
+    &lt;!-- end better work --&gt;
 
     &lt;!-- start footer --&gt;
-    &lt;section class=&quot;footer px-50 py-3 py-md-4 w-75 offset-0 offset-lg-3&quot;&gt;&lt;/section&gt;
+    &lt;section class=&quot;footer mt-0 mt-sm-5 text-center text-sm-start&quot;&gt;&lt;/section&gt;
     &lt;!-- end footer --&gt;
 
-    &lt;!--- start script ---&gt;
+    &lt;!-- start script --&gt;
     &lt;script src=&quot;assets/build/js/main.bundle.js&quot;&gt;&lt;/script&gt;
-    &lt;!--- end script ---&gt;
+    &lt;!-- end script --&gt;
 
 &lt;/body&gt;
-&lt;script&gt;
-    // setting paginator for blog
-    SETTING = {
-        POST_PER_PAGE: 6,
-        LOAD_POST: 2
-    }
-&lt;/script&gt;
 &lt;/html&gt;
                 </code>
             </pre>
@@ -234,10 +235,10 @@
 		  <pre>
               <code>
 /*
-Theme Name: Jason
+Theme Name: Tripf
 Author: domainlee
 Support: domainlee.niit@gmail.com
-Description: Template personal for blog , my cv, resume ...
+Description: Template HTML travel agency, booking, tour ...
 Version: 1.0.0
 */
 
@@ -246,17 +247,31 @@ Version: 1.0.0
 1. Theme default css
 2. Loading
 3. Header
-4. About me
-5. My Resume
-6. My Service
-7. My Project
-8. My Client
-8. My Blog
-10. Contact
-11. Footer
-12. Single Page
-13. Typography
-14. Custom Style
+4. Hero
+5. Destinations Form
+6. Support
+7. Discount
+8. Destinations List
+9. Top Destinations
+10. Resort Surprises
+11. Explore Destinations
+12. Popular Search
+13. Blog
+14. Better Work
+15. Guides
+16. FAQ
+17. Tour Gallery
+18. Tour Detail
+19. Gallery
+20. Testimonials
+21. 404
+22. Login
+23. Footer
+24. Single Page
+25. Sidebar
+26. Page Contact
+27. Typography
+28. Custom Style
 -------------------------------------
 */
               </code>
@@ -284,8 +299,6 @@ Version: 1.0.0
             <p>I Have Used Two Variations of Fonts in this HTML Template</p>
             <img src="assets/images/red-hat-display.png" />
             <p>Fonts used in this Template is the standard <strong><a href="https://fonts.google.com/specimen/Red+Hat+Display?query=Red+Hat+Display" target="_blank">Free fonts Red Hat Display</a></strong></p>
-            <img src="assets/images/bungee-hairline.png" />
-            <p>Fonts used in this Template is the standard <strong><a href="https://fonts.google.com/specimen/Bungee+Hairline?query=Bungee+Hairline" target="_blank">Free fonts Bungee Hairline</a></strong></p>
         </section>
 		<hr class="divider">
 
