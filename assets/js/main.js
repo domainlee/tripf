@@ -458,6 +458,14 @@
         };
     }
 
+    var back_to_top = function () {
+        $(document).on('click', '.back-to-top', function() {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 700);
+        });
+    }
+
     var sidebarScroll = function() {
         $('.sidebar-fixed').theiaStickySidebar({
             additionalMarginTop: 75
@@ -483,13 +491,16 @@
         form_search();
         accordion();
         sidebarScroll();
+        back_to_top();
 
         $(document).on( 'scroll', function(){
             animation();
-        });
-
-        $('.scroll').on( 'scroll', function(){
-            animation();
+            var scroll_top = $('.back-to-top');
+            if ($(window).scrollTop() > 200) {
+                scroll_top.fadeIn(10);
+            } else {
+                scroll_top.fadeOut(10);
+            }
         });
 
     });
