@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!-- Use dark/light let set default for themes -->
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Destination - Travel tour booking adventure agency</title>
+
+    <link href="/" rel="canonical">
+    <link href="assets/img/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+    <!-- start style -->
+    <link href="assets/build/css/main.min.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- end style -->
+</head>
+<body class="home">
+
+    <!-- start loading-->
+    <div class="loading">
+        <div class="loading__inner">
+            <div class="loading__list">
+                <img src="assets/img/loading.gif" alt="loading" >
+            </div>
+        </div>
+    </div>
+    <!-- end loading-->
+
+    <!-- start header-->
+    <section class="header d-flex align-content-center flex-row">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header_inner d-flex align-items-center">
+                        <div class="header__left">
+                            <a href="index.html">
+                                <h1 class="header__logo m-0">
+                                    <img class="light" src="assets/img/logo.png" alt="logo" >
+                                </h1>
+                            </a>
+                        </div>
+                        <div class="header__menu ms-auto d-flex flex-row justify-content-center align-items-center">
+                            <!-- start nav desktop -->
+                            <div class="header__nav d-none d-lg-flex align-items-center justify-content-center mx-0 mx-lg-3">
+                                <ul class="header__navigation nav d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="tours.html">Tour</a>
+                                        <ul>
+                                            <li class="nav-item"><a class="nav-link" href="tours.html">Tour</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="tour-details.html">Tour Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="destination.html">Destination</a>
+                                        <ul>
+                                            <li class="nav-item"><a class="nav-link" href="destination.html">Destination</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="tour-details.html">Destination Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="galleries.html">Gallery</a></li>
+
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="about.html">Page</a>
+                                        <ul>
+                                            <li class="nav-item menu-item-has-children">
+                                                <a class="nav-link" href="blog.html">Blog</a>
+                                                <ul>
+                                                    <li class="nav-item"><a class="nav-link" href="blog-grid.html">Blog Grid</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="blog-list.html">Blog List</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="post.html">Single Post</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item menu-item-has-children">
+                                                <a class="nav-link" href="about.html">About</a>
+                                                <ul>
+                                                    <li class="nav-item"><a class="nav-link" href="guides.html">Team</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- end nav desktop -->
+                            <!-- start nav mobile -->
+                            <div class="header__nav--mobile d-flex d-lg-none flex-column align-items-center justify-content-center mx-0 mx-lg-3">
+                                <ul class="header__navigation nav d-flex flex-column flex-lg-row justify-content-center px-5 col-12 col-sm-8 mx-auto">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="tours.html">Tour</a>
+                                        <ul>
+                                            <li class="nav-item"><a class="nav-link" href="tours.html">Tour</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="tour-details.html">Tour Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="destination.html">Destination</a>
+                                        <ul>
+                                            <li class="nav-item"><a class="nav-link" href="destination.html">Destination</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="tour-details.html">Destination Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="galleries.html">Gallery</a></li>
+
+                                    <li class="nav-item menu-item-has-children">
+                                        <a class="nav-link" href="about.html">Page</a>
+                                        <ul>
+                                            <li class="nav-item menu-item-has-children">
+                                                <a class="nav-link" href="blog.html">Blog</a>
+                                                <ul>
+                                                    <li class="nav-item"><a class="nav-link" href="blog-grid.html">Blog Grid</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="blog-list.html">Blog List</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="post.html">Single Post</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item menu-item-has-children">
+                                                <a class="nav-link" href="about.html">About</a>
+                                                <ul>
+                                                    <li class="nav-item"><a class="nav-link" href="guides.html">Team</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                                <div class="header__control mt-5">
+                                    <a class="header__control--bt1" href="contact.html">Become Partner</a>
+                                    <a class="header__control--bt2" href="login.html">Login / Register</a>
+                                </div>
+                            </div>
+                            <!-- end nav mobile -->
+                            <a class="header__button-menu d-inline-flex d-lg-none"></a>
+                        </div>
+                        <div class="header__control d-none d-lg-block">
+                            <a class="header__control--bt1" href="contact.html">Become Partner</a>
+                            <a class="header__control--bt2" href="login.html">Login / Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="header--fixed"></div>
+    <!-- end header-->
+
+    <!-- start hero-->
+    <section class="hero">
+        <div class="container-xl">
+            <div class="col-12">
+                <figure class="hero__image m-0 ratio ratio-21x9 lazy bg-cover" data-src="assets/images/greg-rivers-rChFUMwAe7E-unsplash.jpg">
+                    <div class="hero___content">
+                        <div class="hero___content--inner">
+                            <strong>Home > Destination</strong>
+                            <h2>Popular Destination</h2>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                <div class="destinations__form">
+                    <div class="d-flex align-items-center mb-4">
+                        <ul class="destinations__form--nav nav d-flex m-0" data-viewport="opacity">
+                            <li class="nav-item" role="presentation">
+                                <button class="active" id="flights-tab" data-bs-toggle="tab" data-bs-target="#flights" type="button" role="tab" aria-controls="flights" aria-selected="true">Search</button>
+                            </li>
+                        </ul>
+                        <a class="hero__form--button ms-auto cursor-pointer"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    </div>
+                    <form>
+                        <div class="tab-content" data-viewport="opacity">
+                            <!-- Start Flights -->
+                            <div class="tab-pane fade show active" id="flights" role="tabpanel" aria-labelledby="flights-tab">
+                                <div class="destinations__form--list d-flex">
+                                    <div class="destinations__form--item d-flex flex-column">
+                                        <label>From</label>
+                                        <input type="text" placeholder="From" name="flight_from" >
+                                        <p class="exa">JFK - John F. Kennedy International...</p>
+                                    </div>
+                                    <div class="destinations__form--item d-flex flex-column">
+                                        <label>To</label>
+                                        <input type="text" placeholder="To" name="flight_to" >
+                                        <p class="exa">LCY, London city airport</p>
+                                    </div>
+                                    <div class="destinations__form--item d-flex flex-column">
+                                        <label>Journey date</label>
+                                        <input type="date" name="flight_date">
+                                        <p class="exa">Flight date</p>
+                                    </div>
+                                    <div class="destinations__form--item d-flex flex-column">
+                                        <label>Return date</label>
+                                        <input type="date" name="flight_date">
+                                        <p class="exa">Flight date</p>
+                                    </div>
+                                    <div class="destinations__form--item d-flex flex-column">
+                                        <label>Passenger, Class</label>
+                                        <input type="text" placeholder="Number" class="button-form-extra" data-form="flight_passenger_form" name="flight_passenger_class" >
+                                        <p class="exa">1 Adult, 2 Children, 1 Infant. Business...</p>
+                                        <div id="flight_passenger_form" class="form-extra">
+                                            <h4>Cabin Class</h4>
+                                            <div class="form-extra__cabin d-flex flex-column flex-sm-row justify-content-between mb-4">
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Economy
+                                                        <input type="radio" name="cabin" value="economy">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        Business
+                                                        <input type="radio" name="cabin" value="business">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-extra__cabin--item">
+                                                    <label>
+                                                        First Class
+                                                        <input type="radio" name="cabin" value="first class">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h4>Passenger</h4>
+                                            <div class="form-extra__passenger">
+                                                <div class="form-extra__passenger--item d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                                    <div class="text-center text-sm-start mb-2 mb-md-0 flex-1">
+                                                        <strong class="d-block">Adult</strong>
+                                                        <span class="d-block">12+ yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" >
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                                    <div class="text-center text-sm-start mb-2 mb-md-0 flex-1">
+                                                        <strong class="d-block">Children</strong>
+                                                        <span class="d-block">2 - Less than 12 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" >
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-extra__passenger--item d-flex flex-column flex-sm-row justify-content-between">
+                                                    <div class="text-center text-sm-start mb-2 mb-md-0 flex-1">
+                                                        <strong class="d-block">Infant</strong>
+                                                        <span class="d-block">Less than 2 yrs</span>
+                                                    </div>
+                                                    <div class="form-extra__passenger--control">
+                                                        <a class="add">+</a>
+                                                        <input class="form-extra__passenger--number" type="text" value="0" >
+                                                        <a class="minus">-</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Flights -->
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end hero-->
+
+    <!-- top destinations -->
+    <section class="top-destinations">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="heading-default" data-viewport="opacity">Top destinations</h2>
+                    <div class="top-destinations__list top-destinations-five__js owl-carousel owl-theme" data-viewport="opacity">
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/johan-mouchet-mallorca-spain-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Spain</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1233</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/spencer-davis-cairo-egypt-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Egypt</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1368</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/sipan-hamed-rhodes-greece-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Greece</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1266</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/darren-lawrence-tulum-mexico-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Mexico</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1338</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/morgan-dubrovnik-croatia-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Croatia</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1388</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/vitor-paladini-natal-brazil-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Brazil</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1668</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/magdalena-kula-manchee-arusha-tanzania-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Tanzania</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1226</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/antonio-lainez-goremeturkey-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Turkey</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1336</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="top-destinations__item">
+                            <a href="destination.html">
+                                <figure class="top-destinations__image ratio ratio-8x10 owl-lazy" data-src="assets/images/yang-yang-santorini-greece-unsplash.jpg">
+                                    <div class="top-destinations__content">
+                                        <h3 class="top-destinations__name">Greece</h3>
+                                        <div class="top-destinations__number">
+                                            <strong>1366</strong>
+                                            <span>Destinations</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end top destinations -->
+
+    <!-- start explore destinations -->
+    <section class="explore-destinations ">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-12">
+                    <div class="destinations__list ">
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/big-tiny-belly-XtnNrQYC7ts-unsplash.jpg">
+                                        <h3>Miracle Resort</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$300.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 233113</h4>
+                                        <span><i class="icofont-location-pin"></i>Singapore Resort</span>
+                                        <div class="destinations__number">42%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/greg-rivers-rChFUMwAe7E-unsplash.jpg">
+                                        <h3>Warwick Hotels & Resorts</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$550.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 167811</h4>
+                                        <span><i class="icofont-location-pin"></i>Singapore Resort</span>
+                                        <div class="destinations__number">35%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/ian-mackey-Uzg0pq7pDCU-unsplash.jpg">
+                                        <h3>HollyWood Hills Upscale</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$300.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 113368</h4>
+                                        <span><i class="icofont-location-pin"></i>England Resort</span>
+                                        <div class="destinations__number">50%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/ralph-ravi-kayden-2d4lAQAlbDA-unsplash.jpg">
+                                        <h3>Nordic Arctic Hall</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$200.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 266688</h4>
+                                        <span><i class="icofont-location-pin"></i>Spain Resort</span>
+                                        <div class="destinations__number">45%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/stephen-leonardi-XKIO6ZgCObo-unsplash.jpg">
+                                        <h3>Warwick Hotels & Resorts</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$400.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 6633368</h4>
+                                        <span><i class="icofont-location-pin"></i>Italy Resort</span>
+                                        <div class="destinations__number">40%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/big-tiny-belly-XtnNrQYC7ts-unsplash.jpg">
+                                        <h3>Miracle Resort</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$250.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 335668</h4>
+                                        <span><i class="icofont-location-pin"></i>Singapore Resort</span>
+                                        <div class="destinations__number">36%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/morgan-dubrovnik-croatia-unsplash.jpg">
+                                        <h3>Miracle Resort</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$250.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 335668</h4>
+                                        <span><i class="icofont-location-pin"></i>Singapore Resort</span>
+                                        <div class="destinations__number">36%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/yang-yang-santorini-greece-unsplash.jpg">
+                                        <h3>Miracle Resort</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$250.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 335668</h4>
+                                        <span><i class="icofont-location-pin"></i>Singapore Resort</span>
+                                        <div class="destinations__number">36%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/ian-mackey-Uzg0pq7pDCU-unsplash.jpg">
+                                        <h3>HollyWood Hills Upscale</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$300.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 113368</h4>
+                                        <span><i class="icofont-location-pin"></i>England Resort</span>
+                                        <div class="destinations__number">50%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/ralph-ravi-kayden-2d4lAQAlbDA-unsplash.jpg">
+                                        <h3>Nordic Arctic Hall</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$200.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 266688</h4>
+                                        <span><i class="icofont-location-pin"></i>Spain Resort</span>
+                                        <div class="destinations__number">45%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/stephen-leonardi-XKIO6ZgCObo-unsplash.jpg">
+                                        <h3>Warwick Hotels & Resorts</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$400.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 6633368</h4>
+                                        <span><i class="icofont-location-pin"></i>Italy Resort</span>
+                                        <div class="destinations__number">40%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="destinations__item">
+                            <div class="destinations__item--inner">
+                                <a href="tour-details.html">
+                                    <figure class="lazy ratio ratio-4x3 bg-cover m-0" data-src="assets/images/big-tiny-belly-XtnNrQYC7ts-unsplash.jpg">
+                                        <h3>Miracle Resort</h3>
+                                    </figure>
+                                    <div class="destinations__content">
+                                        <div class="destinations__price">$250.000</div>
+                                        <h4 class="destinations__booking-id">Booking ID: 335668</h4>
+                                        <span><i class="icofont-location-pin"></i>Singapore Resort</span>
+                                        <div class="destinations__number">36%</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination-wrapper">
+                        <ul class="pagination-list">
+                            <li class="pagination-list-item-prev">
+                                <a href="#" class="pagination-list-item-button"> <i class="icofont-rounded-left"></i> </a>
+                            </li>
+                            <li class="pagination-list-item active">
+                                <a href="#" class="pagination-list-item-link"> 1 </a>
+                            </li>
+                            <li class="pagination-list-item">
+                                <a href="#" class="pagination-list-item-link"> 2 </a>
+                            </li>
+                            <li class="pagination-list-item">
+                                <a href="#" class="pagination-list-item-link"> 3 </a>
+                            </li>
+                            <li class="pagination-list-item">
+                                <a href="#" class="pagination-list-item-link"> 4 </a>
+                            </li>
+                            <li class="pagination-list-item">
+                                <a href="#" class="pagination-list-item-link"> 5 </a>
+                            </li>
+                            <li class="pagination-list-item-next">
+                                <a href="#" class="pagination-list-item-button"> <i class="icofont-rounded-right"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end explore destinations -->
+
+
+    <!-- start better work -->
+    <section class="better-work">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="heading-default" data-viewport="opacity">Get Better Work</h2>
+                    <div class="better-work__sub">See why millions people across 195 countries use FindTrip.</div>
+                    <div class="better-work__form">
+                        <form>
+                            <input placeholder="youremail@gmail.com" type="text" >
+                            <button type="submit">Try For Free</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end better work -->
+
+    <!-- start footer -->
+    <section class="footer mt-0 mt-sm-5 text-center text-sm-start">
+        <div class="container-xl">
+            <div class="row py-5">
+                <div class="col-12 col-md-3">
+                    <h2 class="footer__logo m-0 text-center text-sm-start">
+                        <img class="light" src="assets/img/logo.png" alt="logo" >
+                    </h2>
+                    <div class="footer__intro">Enjoy the touring<br>with FindTrip</div>
+                    <div class="footer__social my-3 my-md-0">
+                        <ul class="social justify-content-center justify-content-sm-start">
+                            <li class="li-facebook"><a href="#" target="_blank" rel="alternate" title="Facebook"> <i class="fa fa-facebook-f"></i></a></li>
+                            <li class="li-google"><a href="#" target="_blank" rel="alternate" title="Google"> <i class="fa fa-google"></i></a></li>
+                            <li class="li-twitter"><a href="#" target="_blank" rel="alternate" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-2 offset-0 offset-lg-1">
+                    <div class="footer__items">
+                        <h4>Menu</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-2">
+                    <div class="footer__items">
+                        <h4>Booking Plan</h4>
+                        <ul>
+                            <li><a href="destination.html">Personal Trip</a></li>
+                            <li><a href="tours.html">Group Trip</a></li>
+                            <li><a href="tours.html">Company Trip</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-2">
+                    <div class="footer__items">
+                        <h4>Further Information</h4>
+                        <ul>
+                            <li><a href="about.html">Term & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 mb-2 mb-md-0 col-md-2">
+                    <div class="footer__items">
+                        <h4>Get App</h4>
+                        <ul>
+                            <li><a href="#">App Store</a></li>
+                            <li><a href="#">Google Play Store</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer__copywriter text-center">
+                        Copyright © 2022 All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end footer -->
+
+    <!-- start script -->
+    <script src="assets/build/js/main.bundle.js"></script>
+    <!-- end script -->
+
+</body>
+</html>
