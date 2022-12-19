@@ -433,6 +433,46 @@ img {
         }
     }
 }
+.hero-two {
+    position: relative;
+    background-position: center;
+    background-size: 110% auto;
+    -webkit-animation: bg-move 50s infinite;
+    animation: bg-move 50s infinite;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 48%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.8) 48%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.8) 48%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    }
+    .hero-two__image {
+        .hero-two___content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .hero-two___content--inner {
+                text-align: center;
+                color: $color-white;
+                h2 {
+                    font-size: 48px;
+                    font-weight: 700;
+                }
+                > div  {
+                    font-size: 22px;
+                }
+            }
+
+        }
+    }
+}
 /** 4. End Hero **/
 
 /** 5. Start Destinations Form **/
@@ -480,6 +520,11 @@ img {
                         visibility: visible;
                     }
                 }
+                &:last-child {
+                    .hero-two & {
+                        flex: 0;
+                    }
+                }
             }
             label {
                 margin: 0 0 5px;
@@ -504,6 +549,22 @@ img {
     .hero__form--button {
         font-size: 18px;
         cursor: pointer;
+        .hero-two & {
+            width: 60px;
+            height: 45px;
+            background-color: #f98609;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            color: #FFF;
+        }
+    }
+    .hero-two & {
+        margin: 50px 0 0;
+        padding: 25px 30px;
+        width: 100%;
     }
 }
 
